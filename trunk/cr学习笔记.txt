@@ -1,0 +1,7 @@
+1.备注. config $config['subclass_prefix'] 设置核心类继承前缀
+2.备注. 使用redirect需加载$this->load->helper(array('form', 'url'));   url
+3.备注. diskfreespace disk_free_space别名
+4.备注. 表单写法
+<? $attributes = array('class' => 'page-form', 'id' => 'page-form')?>
+<?=form_open($this->uri->uri_string(),$attributes) ?>
+<?=form_close() ?>

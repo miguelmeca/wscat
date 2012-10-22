@@ -1,0 +1,31 @@
+            $config['base_url']=site_url('accounts/index');
+            $config['total_rows']=100;//数据总条数
+            $config['per_page']=5;//每页显示条数
+            $config['uri_segment']=3;//设置URI 的哪个部分包含页数
+            $config['num_links']=2;//当前页码的前面和后面的“数字”链接的数量
+            $config['use_page_numbers']=TRUE;//默认分页URL中是显示每页记录数,启用use_page_numbers后显示的是当前页码
+            $config['full_tag_open'] = '<ul class="controls-buttons">';//把打开的标签放在所有结果的左侧。
+            $config['full_tag_close'] = '</ul>';//把关闭的标签放在所有结果的右侧。
+            $config['first_link'] = 'First';//你希望在分页的左边显示“第一页”链接的名字。如果你不希望显示，可以把它的值设为 FALSE
+            $config['first_tag_open'] = '<li>';//“第一页”链接的打开标签。
+            $config['first_tag_close'] = '</li>';//“第一页”链接的关闭标签。
+            $config['last_link'] = 'Last';//你希望在分页的右边显示“最后一页”链接的名字。如果你不希望显示，可以把它的值设为 FALSE 。
+            $config['last_tag_open'] = '<li>';//“最后一页”链接的打开标签。
+            $config['last_tag_close'] = '</li>';//“最后一页”链接的关闭标签。
+            $config['prev_link'] = '&lt;';//你希望在分页中显示“上一页”链接的名字。如果你不希望显示，可以把它的值设为 FALSE 。
+            $config['prev_tag_open'] = '<li>';//“上一页”链接的打开标签 。
+            $config['prev_tag_close'] = '</li>';//“上一页”链接的关闭标签 。
+            $config['next_link'] = '&gt;';//你希望在分页中显示“下一页”链接的名字。如果你不希望显示，可以把它的值设为 FALSE 。
+            $config['next_tag_open'] = '<li>';//“下一页”链接的打开标签 。
+            $config['next_tag_close'] = '</li>';//“下一页”链接的关闭标签 。
+            $config['num_tag_open'] = '<li>';//“数字”链接的打开标签。
+            $config['num_tag_close'] = '</li>';//“数字”链接的关闭标签。
+            $config['cur_tag_open'] = '<li><a class="current"><b>';//“当前”链接的打开标签。
+            $config['cur_tag_close'] = '</b></a></li>';//“当前”链接的关闭标签。
+            $this->pagination->initialize($config);//以上参数被 $this->pagination->initialize 方法传递
+            $data['pagination']=$this->pagination->create_links();//创建分页变量给$pagination
+           
+            $arr['num']=$config['per_page'];
+            $arr['offset']=$this->uri->segment(3)!==FALSE?$this->uri->segment(3):0;
+
+            $data['accounts'] = $this->Accounts_model->getAccounts($arr);//获取数据

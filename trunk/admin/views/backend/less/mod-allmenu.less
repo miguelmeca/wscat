@@ -1,0 +1,120 @@
+// ALERT STYLES
+// ------------
+
+// Base allmenu
+.mast-header{
+	height:36px;
+	line-height:36px;
+	background:#2d91d2;
+	margin:10px 0;
+	.mast-menu{
+		position:relative;
+		width:1000px;
+		margin:auto;
+		z-index:1000;
+		.mast-ul{
+			height:36px;
+			line-height:36px;
+			li{
+				position:relative;
+				float:left;
+				padding:0 15px;
+				.mast-a{
+					font-weight:bold;
+					font-size:14px;
+					float:left;
+					height:33px;
+					line-height:33px;
+					color:#ffffff;
+					border:1px solid #2d91d2;
+					background:#2d91d2;
+					padding:0 15px;
+					margin-top:1px;
+					&:hover{
+						border:1px solid #78c3f5;
+						border-bottom:1px solid #ffffff;
+						background:#ffffff;
+						color:#0f87d7;
+						text-decoration:none;
+					}
+				}
+				.i-hot{
+					position:absolute;
+					right:15px;
+					top:-4px;
+					background:url('../images/in-hot.png') left top no-repeat;
+					width:17px;
+					height:19px;
+					*height:22px;
+					_height:22px;
+					*background:url('../images/hot.gif') left top no-repeat;
+					_background:url('../images/hot.gif') left top no-repeat;
+				}
+				&:hover{
+					i{
+						-webkit-Animation:tran 0.3s ease-out;
+						-moz-Animation:tran 0.3s ease-out;
+						-ms-Animation:tran 0.3s ease-out;
+						-o-Animation:tran 0.3s ease-out;
+						Animation:tran 0.3s ease-out;
+					}
+				}
+				.sub-menu{
+					width:135px;
+					position:absolute;
+					top:36px;
+					left:15px;
+					z-index:1000;
+					background:#ffffff;
+					border:1px solid #80c7f6;
+					border-top:none;
+					font-size:14px;
+					li{
+						padding:0px;
+						a{
+							color:@t1;
+							float:left;
+							padding-left:15px;
+							width:120px;
+							&:hover{
+								background:#e1f5ff;
+								text-decoration:none;
+							}
+						}
+					}
+				}
+			}
+			.active{
+				a{
+					border:1px solid #78c3f5;
+					border-bottom:1px solid #ffffff;
+					background:#ffffff;
+					color:#0f87d7;
+				}
+			}
+		}
+		.rast-ul{
+			position:absolute;
+			right:10px;
+			top:0px;
+			li{
+				float:left;
+				a{
+					float:left;
+					border-right:1px solid #ffffff;
+					height:14px;
+					line-height:14px;
+					color:#ffffff;
+					font-weight:bold;
+					vertical-align:middle;
+					padding:0 5px;
+					margin-top:10px;
+					&.no-border{
+						border:none;
+					}
+				}
+			}
+		}
+	}
+}
+

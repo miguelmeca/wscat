@@ -1,0 +1,70 @@
+// ALERT STYLES
+// ------------
+
+// Base pagebar
+.page-bar{
+	padding:8px 0;
+	text-align:center;
+	a{
+		float:left;
+		border: 1px solid #B3B3B3;
+		border-radius: 2px 2px 2px 2px;
+		display: inline-block;
+		font-size: 14px;
+		height: 24px;
+		line-height: 22px;
+		margin: 0 2px;
+		padding: 0 7px;
+		text-align: center;
+		vertical-align: middle;
+		color:#3d3d3d;
+		&:hover{
+		    border-color: red;
+			color: red;
+			text-decoration: none;
+		}
+		&.active{
+			background-color: red;
+			border: 1px solid red;
+			color: #FFFFFF;
+			position: relative;
+			text-decoration: none;
+		}
+		&.iPrev{
+			i{
+				font-family: Georgia;	
+				padding-right:5px;
+			}
+		}
+		&.iNext{
+			i{
+				font-family: Georgia;	
+				padding-left:5px;
+			}
+		}
+	}
+	span{
+		float:left;
+		border: 1px solid #B3B3B3;
+		border-radius: 2px 2px 2px 2px;
+		display: inline-block;
+		font-size: 14px;
+		height: 24px;
+		line-height: 22px;
+		margin: 0 2px;
+		padding: 0 7px;
+		text-align: center;
+		vertical-align: middle;
+		color:#cccccc;
+		i{
+			font-family: Georgia;	
+			padding-left:5px;
+		}
+	}
+	input[type="text"]{
+		float:left;
+		padding:3px;
+		width:18px;
+		margin-left:5px;
+	}
+}
