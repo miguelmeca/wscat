@@ -1,0 +1,116 @@
+/*!
+	tpl mods
+	ryan ni  zhaogang.com
+ */
+@import "base.less";
+
+// 模板变量
+// -------------------------
+@navbg:            #000;
+
+
+/*
+ * @name: 列表
+ * @overview: 一般列表样式
+ * @require: null;
+ */
+ul{
+	&.ui-list{
+		.ui-list-item{
+			height: 24px;
+			line-height: 24px;
+			overflow: hidden;
+		}
+	}
+	&.ui-list-lines{
+		.ui-list-item{
+			float:left;
+			a{
+				padding-right:5px;
+			}
+		}
+	}
+}
+/*
+ * @name: 导航
+ * @overview: 一般导航
+ * @require: null
+ */  
+ul{
+	&.ui-nav{
+		.ui-nav-item{
+			background:@navbg;
+			position:relative;
+			float:left;
+			a{
+				color:@white;
+				display:block;
+				width:80px;
+				height:24px;
+				line-height:24px;
+				text-align:center;
+				&:hover{
+					text-decoration:none;
+				}
+			}
+			.ui-nav-item-child{
+				position:absolute;
+				left:0;
+				top:24px;
+				display:none;
+				width:78px;
+				border:1px solid #ccc;
+				border-top:none;
+				background:@white;
+				li{
+					height:24px;
+					line-height:24px;
+					text-align:center;
+				}
+			}
+			&:hover{
+				.ui-nav-item-child{
+					display:block;
+				}
+			}
+		}
+	}
+}
+ 
+/*
+ * @name: 标题
+ * @overview: 有其他内容包含在内的标题
+ * @require: null;
+ */
+.ui-title{
+	text-align:center;
+	.ui-title-cnt{
+		color:@grayDarker;
+	}
+	.ui-title-subcnt{
+		color:@grayLight;
+	}
+}
+
+/*
+ * @name: 步骤
+ * @overview: 用户操作步骤
+ * @require: null
+ */
+ ol{
+	&.ui-step{
+		.ui-step-item{
+			float:left;
+			&.ui-step-item-first{
+			
+			}
+			&.ui-step-current{
+			
+			}
+		}
+		.ui-step-item-last{
+		
+		}
+	}
+ }
+
