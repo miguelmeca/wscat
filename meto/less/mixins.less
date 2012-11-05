@@ -1,14 +1,9 @@
 //
-// Mixins
+// 方法集
 // --------------------------------------------------
 
 
-// UTILITY MIXINS
-// --------------------------------------------------
-
-// Clearfix
-// --------
-// For clearing floats like a boss h5bp.com/q
+// 经典清除浮动
 .clear {
   *zoom: 1;
   &:before,
@@ -24,7 +19,7 @@
   }
 }
 
-// Webkit-style focus
+// webkit核心focus效果方法
 // ------------------
 .tab-focus() {
   // Default
@@ -34,7 +29,7 @@
   outline-offset: -2px;
 }
 
-// Center-align a block level element
+// 居中margin
 // ----------------------------------
 .center-block() {
   display: block;
@@ -42,7 +37,7 @@
   margin-right: auto;
 }
 
-// no margin
+// 无margin
 // ---------------------
 .no-margin(){
   margin:0;
@@ -74,17 +69,18 @@
   *margin-right: .3em;
 }
 
-// Sizing shortcuts
-// -------------------------
+// 元素宽高设置
 .size(@height, @width) {
   width: @width;
   height: @height;
 }
+
+//设置正方形
 .square(@size) {
   .size(@size, @size);
 }
 
-// Placeholder text
+// Placeholder文本各浏览器的颜色设置
 // -------------------------
 .placeholder(@color: @placeholderText) {
   &:-moz-placeholder {
@@ -98,9 +94,7 @@
   }
 }
 
-// Text overflow
-// -------------------------
-// Requires inline-block or block for proper styling
+// 经典元素超出部分以...显示
 .text-overflow() {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -119,7 +113,7 @@
 }
 
 
-// FONTS
+// 设置字体属性的方法
 // --------------------------------------------------
 
 #font {
@@ -154,7 +148,7 @@
 }
 
 
-// FORMS
+// 表单
 // --------------------------------------------------
 
 // Block level inputs
@@ -203,17 +197,17 @@
 
 
 
-// CSS3 PROPERTIES
+// css3 圆角
 // --------------------------------------------------
 
-// Border Radius
+// 4圆角
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
 
-// Single Corner Border Radius
+// 单独圆角
 .border-top-left-radius(@radius) {
   -webkit-border-top-left-radius: @radius;
       -moz-border-radius-topleft: @radius;
@@ -235,7 +229,7 @@
           border-bottom-left-radius: @radius;
 }
 
-// Single Side Border Radius
+// 组合圆角
 .border-top-radius(@radius) {
   .border-top-right-radius(@radius);
   .border-top-left-radius(@radius);
@@ -253,14 +247,14 @@
   .border-bottom-left-radius(@radius);
 }
 
-// Drop shadows
+// 盒阴影
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow;
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
 
-// Transitions
+// 变换
 .transition(@transition) {
   -webkit-transition: @transition;
      -moz-transition: @transition;

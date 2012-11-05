@@ -1,6 +1,21 @@
-// Display in IE6-9 and FF3
-// -------------------------
+/*!
+	my base css  ncc zhaogang.com
+ */
+ 
+//内外边距通常让各个浏览器样式的表现位置不同,reset重置它
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	.no-margin();
+}
 
+//移动浏览器字体大小默认,防止用户自定义背景颜色对网页的影响
+html {
+  font-size: 100%;
+  background: @white;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+// 重设 HTML5 标签, IE使用这些标签需要html.js
 article,
 aside,
 details,
@@ -14,9 +29,7 @@ section {
   display: block;
 }
 
-// Display block in IE6-9 and FF3
-// -------------------------
-
+// HTML5 媒体文件跟 img 保持一致
 audio,
 canvas,
 video {
@@ -25,29 +38,22 @@ video {
   *zoom: 1;
 }
 
-// Prevents modern browsers from displaying 'audio' without controls
+// 防止现代浏览器音频控制
 // -------------------------
 
 audio:not([controls]) {
     display: none;
 }
 
-// Base settings
-// -------------------------
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
-	.no-margin();
-}
+// 去掉各Table  cell 的边距并让其边重合
 table {
-	border-collapse:collapse;border-spacing:0;
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:inherit;
+	font:100%;
 }
 
-// Focus states
+// a标签默认样式
 a{
 	text-decoration:none;
 	&:link{
@@ -58,7 +64,6 @@ a{
 		outline: 0;
 	}
 	&:active {
-		margin-top:1px;
 		outline: 0;
 	}
 	&:focus {
@@ -66,8 +71,7 @@ a{
 	}
 }
 
-// Prevents sub and sup affecting line-height in all browsers
-// -------------------------
+// 统一上标和下标
 
 sub,
 sup {
@@ -83,12 +87,12 @@ sub {
   bottom: -0.25em;
 }
 
-// Img border in a's and image quality
+// 图片样式重置(如有a标签包含)
 // -------------------------
 
 img {
-  max-width: 100%; // Make images inherently responsive
-  height: auto; // Make images inherently responsive
+  max-width: 100%; 
+  height: auto; 
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -100,33 +104,47 @@ img,button,input {
 	-ms-interpolation-mode: bicubic;
 	vertical-align: middle;
 }
+
+// 一致的 del 样式
+del {
+  text-decoration: line-through;
+}
+
+//标签字体宽度重设
 address,caption,cite,code,dfn,em,strong,th,var{
 	font-style:normal;font-weight:normal;
 }
+
+// 去掉列表前的标识, li 会继承
 ol,ul,li{
 	list-style:none;list-style-type: none;
 }
+
+// 对齐是排版最重要的因素 
 caption,th{
 	text-align:left;
 }
+
+//重设h1-h6的浏览器默认样式,在css中使用样式控制他们
 h1,h2,h3,h4,h5,h6{
 	font-size:100%;overflow:hidden;
 }
+
+//重设h3-h4的字体粗体
 h3,h4{
 	font-weight:lighter;
 }
+//定义短标签引用
 q:before,q:after{content:'';}
-abbr,acronym{border:0;}
 
-// Prevent max-width from affecting Google Maps
+// 去掉Google Maps 使用时img最大大小
 #map_canvas img {
   max-width: none;
 }
 
 // Forms
 // -------------------------
-
-// Font size in all browsers, margin changes, misc consistency
+// 表单元素并不继承父级 font 
 button,
 input,
 select,
@@ -135,16 +153,24 @@ textarea {
   font-size: 100%;
   vertical-align: middle;
 }
+
+//使textarea不能横向无限拉取
+.textarea{
+  resize: vertical;
+}
+
 button,
 input {
   *overflow: visible; // Inner spacing ie IE6/7
   line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
 }
 button::-moz-focus-inner,
-input::-moz-focus-inner { // Inner padding and border oddities in FF3/4
+input::-moz-focus-inner { 
   padding: 0;
   border: 0;
 }
+
+//伪类定义html5相关
 button,
 input[type="button"],
 input[type="reset"],
@@ -162,14 +188,50 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; // Inner-padding issues in Chrome OSX, Safari 5
 }
+
+//文本输入框重置
 textarea {
   overflow: auto; // Remove vertical scrollbar in IE6-9
   vertical-align: top; // Readability and alignment cross-browser
 }
 
-//base style
+// IE bug fixed: th 不继承 text-align
+th {
+  text-align: inherit;
+}
+
+// 去除其默认边框
+fieldset,img {
+  border: 0;
+}
+
+//去掉fieldset默认样式
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+// ie6 7 8(q) bug 显示为行内表现
+iframe {
+  display: block;
+}
+
+// 去掉 firefox 下此元素的边框
+abbr,acronym{border:0;}
+
+// 默认不显示下划线，保持页面简洁
+ins,a {
+  text-decoration: none;
+}
+
+//clearfix空标签代替写法
 .clr {clear:both;}
-table {font-size:inherit;font:100%;}
+
+//clear的其他样式
+.cl{clear:left;}
+.cr{clear:right;}
+
+//字号 11兼容英文小字体 11-24内联使用
 .f11{font-size:11px;}
 .f12{font-size:12px;}
 .f13{font-size:13px;}
@@ -179,35 +241,52 @@ table {font-size:inherit;font:100%;}
 .f18{font-size:18px;}
 .f20{font-size:20px;}
 .f24{font-size:24px;}
-.fn{font-weight:normal;}
+
+//一些中文网页中出现的英文可能需要它
 .en-ft{font-family:arial;}
+
+//负责粗体与普通字体的切换
 .fn{font-weight:normal;}
 .fb{font-weight:700;}
-.c83 {color: #838383;}
-.f333{color:#333333;}
-.f005BB5{color:#005BB5;}
-.f999{color:#999;}
-.ff60{color:#F60;}
-.ffff{color:#FFF;}
+
+//简易浮动 设置内联, 减少浮动带来的bug
+.fl,.fr{display:inline;}
 .fl{float:left;}
 .fr{float:right;}
+
+//负责元素隐藏显示的切换
 .show{ display: block; }
 .hide{ display: none; }
-.cl{clear:left;}
-.cr{clear:right;}
-.cb{clear:both;}
+
+//手型
 .cp{cursor:pointer;}
+
+//字在元素内的align方向
 .tl{text-align:left;}
 .tr{text-align:right;}
 .tc{text-align:center;}
 .tj{text-align:justify;text-justify:inter-ideograph}
+
+//seo使用,如元素使用图片隐藏文字
 .ti {text-indent:-9999em;}
+
+//文字居中
 .vm{vertical-align:middle;}
+
+//行内元素
 .dib{display:inline-block;}
+
+//横内居中
 .ct{display:inline-block;vertical-align:middle;}
+
+//定位方式
 .pr{position:relative;}
 .pa{position:absolute;}
+
+//强制zoom,触发IE浏览器的haslayout解决ie下的浮动，margin重叠等一些问题。
 .zoom{*zoom:1;}
+
+//一些padding定义，负责元素与元素之间的间距,padding使用较少防止耦合
 .p6{padding:6px;}
 .p8{padding:8px;}
 .p10{padding:10px;}
@@ -220,11 +299,15 @@ table {font-size:inherit;font:100%;}
 .mt10{margin-top:10px;}
 .mt15{margin-top:15px;}
 .mt20{margin-top:20px;}
+
+//一些空标签来定义元素与元素之间间距
 .blank3{clear:both;display:block;font-size:1px;overflow:hidden;height:3px;}
 .blank10{clear:both;display:block;font-size:1px;overflow:hidden;height:10px;}
 .blank15{clear:both;display:block;font-size:1px;overflow:hidden;height:15px;}
 .blank25{clear:both;display:block;font-size:1px;overflow:hidden;height:25px;}
+
+//强制无边框
 .noBorder{border:none!important;}
-.flighter{font-weight:lighter;}
+
+//超出不显示
 .oh{overflow:hidden;}
-.dib{display:inline-block;}
