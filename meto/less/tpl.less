@@ -2,12 +2,41 @@
 	tpl mods
 	ryan ni  zhaogang.com
  */
-@import "base.less";
+
 
 // 模板变量
 // -------------------------
 @navbg:            #000;
 
+/*
+ * @name: a链接自定义模块
+ * @overview: 一般链接样式
+ * @require: null;
+ */
+ 
+ //link模块一
+.m-link{
+	a{
+		color:@linkbase;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linkhover;
+			text-decoration:none;
+		}
+	}
+}
+
+//link模块二
+.m-tmp-link{
+	a{
+		color:@linktmp;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linkhover;
+			text-decoration:none;
+		}
+	}
+}
 
 /*
  * @name: 列表
@@ -113,4 +142,83 @@ ul{
 		}
 	}
  }
+ 
+ /*
+ * @name: 重复元素
+ * @overview: 重复出现的元素，我们通常用这种方法来写，这样也会方便JS操作
+ * @require: null
+ */
+.ui-repeater{
+	.ui-repeater-item{}
+	.ui-repeater-current{}
+}
+
+/*
+ * @name: 分页
+ * @overview: 页面分页
+ * @require: null
+ */
+.ui-page{
+	text-align:center;
+	a{
+		float:left;
+		border: 1px solid #B3B3B3;
+		.border-radius(2px);
+		display: inline-block;
+		height: 24px;
+		line-height: 24px;
+		margin: 0 2px;
+		padding: 0 7px;
+		text-align: center;
+		vertical-align: middle;
+		color:@grayDark;
+		&:hover{
+		    border-color: #bf0601;
+			color: #bf0601;
+			text-decoration: none;
+		}
+		&.ui-page-item-current{
+			background-color: #bf0601;
+			border: 1px solid #bf0601;
+			color: #FFFFFF;
+		}
+		&.ui-page-item-prev{
+			i{
+				font-family: Helvetica;	
+				padding-right:5px;
+			}
+		}
+		&.ui-page-next{
+			i{
+				font-family: Helvetica;	
+				padding-left:5px;
+			}
+		}
+	}
+	span{
+		&.ui-page-item{
+			float:left;
+			display: inline-block;
+			height: 24px;
+			line-height: 24px;
+			margin: 0 2px;
+			padding: 0 7px;
+			text-align: center;
+			vertical-align: middle;
+			color:@grayDark;
+		}
+		&.ui-page-item-info{
+			border: 1px solid #B3B3B3;
+			border-radius: 2px 2px 2px 2px;
+			color:#cccccc;
+		}
+	}
+	input[type="text"]{
+		float:left;
+		padding:3px;
+		width:18px;
+		margin-left:5px;
+	}
+}
+
 
