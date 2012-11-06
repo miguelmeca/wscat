@@ -1,7 +1,7 @@
 <?php 
 include "lessc.inc.php";
-$less = new lessc('less/tpl.less');
-file_put_contents('css/tpl.css', $less->parse());
+$less = new lessc('less/base.less');
+file_put_contents('css/base.css', $less->parse());
 ?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
@@ -14,7 +14,7 @@ file_put_contents('css/tpl.css', $less->parse());
 <title>找钢网首页</title>
 <meta name="description" content=" ">
 <meta name="keywords" content=" ">
-<link rel="stylesheet" href="css/tpl.css" />
+<link rel="stylesheet" href="css/base.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <!--[if IE]>
    <script src="js/html5.js"></script>
@@ -27,6 +27,9 @@ file_put_contents('css/tpl.css', $less->parse());
    <script>
  	 DD_belatedPNG.fix('.png-bg');
    </script>
+	<style type="text/css">
+		body { behavior: url(hover.htc); }   
+	</style>
 <![endif]-->
 <style type="text/css">
 	html{background:#f7f7f7;}
@@ -53,13 +56,13 @@ file_put_contents('css/tpl.css', $less->parse());
 
 <div class="code"> 
 	<h3>一般列表横向</h3>
-	<ul class="ui-list ui-list-lines clear">
+	<ul class="ui-list ui-list-lines m-link clear">
 		<li class="ui-list-item"><a href="1.html">新闻第一条</a></li>
 		<li class="ui-list-item"><a href="2.html">新闻第一条b</a></li>
 		<li class="ui-list-item"><a href="3.html">新闻第一条c</a></li>
 	</ul>
 	<h3>一般列表纵向</h3>
-	<ul class="ui-list clear">
+	<ul class="ui-list m-tmp-link clear">
 		<li class="ui-list-item"><a href="1.html">新闻第一条</a></li>
 		<li class="ui-list-item"><a href="2.html">新闻第一条b</a></li>
 		<li class="ui-list-item"><a href="3.html">新闻第一条c</a></li>
@@ -152,7 +155,7 @@ file_put_contents('css/tpl.css', $less->parse());
 
 
 <div class="code"> 
-	<h3>标题(.ui-title)</h3>
+	<h3>标题</h3>
 	<div class="ui-title">
 		<h2 class="ui-title-cnt f16">标题</h2>
 		<div class="ui-title-subcnt f14">
@@ -177,7 +180,7 @@ file_put_contents('css/tpl.css', $less->parse());
 </pre>
 
 <div class="code"> 
-<h3>步骤(.ui-step)</h3>	
+<h3>步骤</h3>	
 	<ol class="ui-step">
 		<li class="ui-step-item ui-step-item-first">
 			第一步
@@ -211,6 +214,18 @@ file_put_contents('css/tpl.css', $less->parse());
 &lt;/ol&gt; &lt;!-- .ui-step --&gt;
 </pre>
 
+<div class="code"> 
+<h3>重复元素</h3>
+	<ul class="ui-repeater">
+		<li class="ui-repeater-item ui-repeater-item-current">内容</li>
+		<li class="ui-repeater-item">内容</li>
+		<li class="ui-repeater-item">内容</li>
+		<li class="ui-repeater-item">内容</li>
+		<li class="ui-repeater-item">内容</li>
+		<li class="ui-repeater-item">内容</li>
+		<li class="ui-repeater-item">内容</li>
+	</ul> <!-- .ui-repeater -->
+</div>
 <pre class="brush: xml">
 <h3>重复元素(.ui-repeater)</h3>
 &lt;ul class="ui-repeater"&gt;
@@ -224,6 +239,22 @@ file_put_contents('css/tpl.css', $less->parse());
 &lt;/ul&gt; &lt;!-- .ui-repeater --&gt;
 </pre>
 
+<div class="code">
+<h3>分页</h3> 
+	<div class="ui-page clear">
+		<span class="ui-page-item ui-page-item-info">共41条记录，共5页</span>
+		<a href="#" class="ui-page-item ui-page-item-first">首页</a>
+		<a href="#" class="ui-page-item ui-page-item-prev"><i>&lt;&lt;</i>上一页</a>
+		<a href="#" class="ui-page-item ui-page-item-current">1</a>
+		<a href="#" class="ui-page-item">2</a>
+		<a href="#" class="ui-page-item">3</a>
+		<span class="ui-page-item">...</span>
+		<a href="#" class="ui-page-item">40</a>
+		<a href="#" class="ui-page-item">41</a>
+		<a href="#" class="ui-page-item ui-page-next">下一页<i>&gt;&gt;</i></a>
+		<a href="#" class="ui-page-item ui-page-last">尾页</a>
+	</div> <!-- .ui-page -->
+</div>
 <pre class="brush: xml">
 <h3>分页(.ui-page)</h3>
 &lt;div class="ui-page"&gt;
@@ -241,6 +272,119 @@ file_put_contents('css/tpl.css', $less->parse());
 &lt;/div&gt; &lt;!-- .ui-page --&gt;
 </pre>
 
+<div class="code"> 
+<h3>表格</h3>	
+	<table class="ui-table">
+		<thead>
+			<tr>
+				<th>表头表头表头表头表头表头</th>
+				<th>表头表头表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+		</tbody>
+	</table> <!-- .ui-table -->
+	<table class="ui-table ui-table-striped">
+		<thead>
+			<tr>
+				<th>表头表头表头表头表头表头</th>
+				<th>表头表头表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+		</tbody>
+	</table> <!-- .ui-table -->
+	<table class="ui-table ui-table-bordered ui-table-hover">
+		<thead>
+			<tr>
+				<th>表头表头表头表头表头表头</th>
+				<th>表头表头表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+		</tbody>
+	</table> <!-- .ui-table -->
+	<table class="ui-table ui-table-hover">
+		<thead>
+			<tr>
+				<th>表头表头表头表头表头表头</th>
+				<th>表头表头表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+		</tbody>
+	</table> <!-- .ui-table -->
+	<table class="ui-table ui-table-condensed">
+		<thead>
+			<tr>
+				<th>表头表头表头表头表头表头</th>
+				<th>表头表头表头</th>
+				<th>表头</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="success">
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr class="error">
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+			<tr class="info">
+				<td>内容</td>
+				<td>内容</td>
+				<td>内容内容内容</td>
+			</tr>
+		</tbody>
+	</table> <!-- .ui-table -->
+</div>
 <pre class="brush: xml">
 <h3>表格(.ui-table)</h3>
 &lt;table class="ui-table"&gt;
@@ -266,6 +410,65 @@ file_put_contents('css/tpl.css', $less->parse());
 &lt;/table&gt; &lt;!-- .ui-table --&gt;
 </pre>
 
+<div class="code"> 
+	<h3>按钮</h3>
+	<table class="ui-table ui-table-bordered">
+		<thead>
+		  <tr>
+			<th>按钮</th>
+			<th>class=""</th>
+			<th>描述</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>
+				<button class="btn btn-large" type="button">默认</button>
+				<button class="btn" type="button">默认</button>
+				<button class="btn btn-small" type="button">默认</button>
+				<button class="btn btn-mini" type="button">默认</button>
+			</td>
+			<td><code>btn</code></td>
+			<td>默认白色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-primary" type="button">蓝色</button></td>
+			<td><code>btn btn-primary</code></td>
+			<td>默认蓝色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-info" type="button">浅色</button></td>
+			<td><code>btn btn-info</code></td>
+			<td>默认浅色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-success" type="button">绿色</button></td>
+			<td><code>btn btn-success</code></td>
+			<td>默认绿色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-warning" type="button">黄色</button></td>
+			<td><code>btn btn-warning</code></td>
+			<td>默认黄色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-danger" type="button">红色</button></td>
+			<td><code>btn btn-danger</code></td>
+			<td>默认红色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-inverse" type="button">黑色</button></td>
+			<td><code>btn btn-inverse</code></td>
+			<td>默认黑色</td>
+		  </tr>
+		  <tr>
+			<td><button class="btn btn-link" type="button">Link</button></td>
+			<td><code>btn btn-link</code></td>
+			<td>默认link样式</td>
+		  </tr>
+		</tbody>
+    </table>
+</div>
 <pre class="brush: xml">
 <h3>按钮(.ui-button)</h3>
 &lt;a class=&quot;ui-button ui-button-disabled&quot;&gt;&lt;span class=&quot;ui-button-text&quot;&gt;文字&lt;/span&gt;&lt;/a&gt;
