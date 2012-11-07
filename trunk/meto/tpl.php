@@ -16,6 +16,8 @@ file_put_contents('css/base.css', $less->parse());
 <meta name="keywords" content=" ">
 <link rel="stylesheet" href="css/base.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap-transition.js"></script>
+<script type="text/javascript" src="js/bootstrap-alert.js"></script>
 <!--[if IE]>
    <script src="js/html5.js"></script>
    <style type="text/css">
@@ -361,9 +363,9 @@ file_put_contents('css/base.css', $less->parse());
 	<table class="ui-table ui-table-condensed">
 		<thead>
 			<tr>
-				<th>表头表头表头表头表头表头</th>
-				<th>表头表头表头</th>
-				<th>表头</th>
+				<th class="span1">表头表头表头表头表头表头</th>
+				<th class="span2">表头表头表头</th>
+				<th class="span3">表头</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -427,6 +429,7 @@ file_put_contents('css/base.css', $less->parse());
 				<button class="btn" type="button">默认</button>
 				<button class="btn btn-small" type="button">默认</button>
 				<button class="btn btn-mini" type="button">默认</button>
+				<button class="btn btn-mini disabled" disabled="disabled" type="button">默认</button>
 			</td>
 			<td><code>btn</code></td>
 			<td>默认白色</td>
@@ -471,12 +474,51 @@ file_put_contents('css/base.css', $less->parse());
 </div>
 <pre class="brush: xml">
 <h3>按钮(.ui-button)</h3>
-&lt;a class=&quot;ui-button ui-button-disabled&quot;&gt;&lt;span class=&quot;ui-button-text&quot;&gt;文字&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;ui-button ui-button-round&quot;&gt;&lt;span class=&quot;ui-button-text&quot;&gt;文字&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;ui-button ui-button-icon-left&quot;&gt;&lt;span class=&quot;ui-icon ui-icon-rarr&quot;&gt;&rarr;&lt;/span&gt;&lt;span class=&quot;ui-button-text&quot;&gt;文字&lt;/span&gt;&lt;/a&gt;
+&lt;button class=&quot;btn btn-large&quot; type=&quot;button&quot;&gt;默认&lt;/button&gt;
+&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;默认&lt;/button&gt;
+&lt;button class=&quot;btn btn-small&quot; type=&quot;button&quot;&gt;默认&lt;/button&gt;
+&lt;button class=&quot;btn btn-mini&quot; type=&quot;button&quot;&gt;默认&lt;/button&gt;
+&lt;button class=&quot;btn btn-mini disabled&quot; disabled=&quot;disabled&quot; type=&quot;button&quot;>默认&lt;/button&gt;
 </pre>
 
-
+<div class="code"> 
+	<h3>表单项</h3>
+	<div class="ui-form-panel">
+		<div class="ui-form-item">
+			<label class="ui-label" for="">输入框</label>
+			<input id="" class="ui-input ui-input-hover" placeholder="我是输入框" type="text" />
+		</div>
+		<div class="ui-form-item">
+			<label class="ui-label" for="">文本输入区</label>
+			<textarea class="ui-textarea"></textarea>
+		</div>
+	</div>
+	<div class="ui-form-panel ui-form-cross mt5">
+		<div class="ui-form-item">
+			<label class="ui-label" for="">输入框</label>
+			<input id="" class="ui-input" placeholder="我是输入框" type="text" />
+			<input id="" class="ui-input ui-input-warning" placeholder="我是输入框" type="text" />
+			<input id="" class="ui-input ui-input-error" placeholder="我是输入框" type="text" />
+			<input id="" class="ui-input ui-input-success" placeholder="我是输入框" type="text" />
+			<span class="ui-form-explain error">输入错误</span>
+		</div>
+		<div class="ui-form-item">
+			<label class="ui-label" for="">文本输入区</label>
+			<textarea class="ui-textarea"></textarea>
+		</div>
+	</div>
+	<div class="ui-form-panel ui-form-cross ui-form-lbw mt5">
+		<div class="ui-form-item">
+			<label class="ui-label" for="">输入框</label>
+			<input id="" class="ui-input ui-input-hover" placeholder="我是输入框" type="text" />
+			<span class="ui-form-explain warning">输入错误</span>
+		</div>
+		<div class="ui-form-item">
+			<label class="ui-label" for="">文本输入区</label>
+			<textarea class="ui-textarea"></textarea>
+		</div>
+	</div>
+</div>
 <pre class="brush: xml">
 <h3>表单项(.ui-input[label])</h3>
 &lt;label class=&quot;ui-label&quot; for=""&gt;&lt;input id=&quot;&quot; class=&quot;ui-input ui-input-hover&quot; type=&quot;text&quot; /&gt;&lt;label&gt;
@@ -484,6 +526,51 @@ file_put_contents('css/base.css', $less->parse());
 &lt;textarea class=&quot;ui-textarea&quot;&gt;&lt;/textarea&gt;
 </pre>
 
+<div class="code"> 
+	<h3>表单</h3>
+	<form name="" class="ui-form" method="post" action="#" id="">
+		<fieldset>
+			<div class="ui-form-panel ui-form-cross ui-form-lbw">
+				<legend>表单标题</legend>
+				<div class="ui-form-item">
+					<label for="" class="ui-label"><em class="ui-form-required">*</em>表单项文本：</label>
+					<input class="ui-input" type="text" />
+					<span class="ui-form-explain">表单项填写说明</span>
+				</div>	
+				<div class="ui-form-item">
+					<label for="" class="ui-label"><em class="ui-form-required">*</em>表单项文本：</label>
+					<input class="ui-input ui-input-warning" type="text" />
+					<span class="ui-form-explain warning">出错文案</span>
+				</div>
+				<div class="ui-form-item">
+					<label for="" class="ui-label"><em class="ui-form-required">*</em>表单项文本：</label>
+					<input class="ui-input ui-input-error" type="text" />
+					<span class="ui-form-explain error">出错文案</span>
+				</div>
+				<div class="ui-form-item">
+					<label for="" class="ui-label"><em class="ui-form-required">*</em>表单项文本：</label>
+					<input class="ui-input ui-input-success" type="text" />
+					<span class="ui-form-explain success">出错文案</span>
+				</div>
+				<div class="ui-form-item tr">
+					<span class="ui-button">
+						<input type="button" class="btn btn-large" value="确定"/>
+						<button class="btn btn-large">确定</button>
+						<input type="button" class="btn btn-small" value="确定"/>
+						<button class="btn btn-small">确定</button>
+						<input type="button" class="btn" value="确定"/>
+						<button class="btn">确定</button>
+						<input type="button" class="btn btn-mini" value="确定"/>
+						<button class="btn btn-mini">确定</button>						
+					</span>
+				</div>
+				<div class="ui-form-item"> 
+					<button class="btn btn-block">确定</button>
+				</div>
+			</div>
+		</fieldset>
+	</form> <!-- .ui-form -->
+</div>
 <pre class="brush: xml">
 <h3>表单(.ui-form)</h3>
 &lt;form name="" class="ui-form" method="post" action="#" id=""&gt;
@@ -511,20 +598,129 @@ file_put_contents('css/base.css', $less->parse());
 &lt;/form&gt; &lt;!-- .ui-form --&gt;
 </pre>
 
+<div class="code"> 
+	<h3>提示消息</h3>
+	<div class="clear">
+		<!-- UI-tips-start-->
+		<div class="alert ui-poptip fade in" id="alert-1">
+			<div class="ui-poptip-shadow">
+				<div class="ui-poptip-container">
+					 <div class="ui-poptip-arrow-left">
+						 <span>◆</span>
+						 <em>◆</em>
+					 </div>
+					 <div class="ui-poptip-txt"> 
+						提示1
+					 </div>
+				</div>
+				<a href="javascript:;" data-dismiss="alert" data-target="#alert-1" class="close">×</a>
+			</div>
+		</div>
+		<!-- UI-tips-end-->
+		<!-- UI-tips-start-->
+		<div class="alert ui-poptip fade in" id="alert-2">
+			<div class="ui-poptip-shadow">
+				<div class="ui-poptip-container">
+					 <div class="ui-poptip-arrow-left ui-poptip-arrow-top">
+						 <span>◆</span>
+						 <em>◆</em>
+					 </div>
+					 <div class="ui-poptip-txt"> 
+						提示2
+					 </div>
+				</div>
+				<a href="javascript:;" data-dismiss="alert" data-target="#alert-2" class="close">×</a>
+			</div>
+		</div>
+		<!-- UI-tips-end-->
+		<!-- UI-tips-start-->
+		<div class="alert ui-poptip fade in" id="alert-3">
+			<div class="ui-poptip-shadow">
+				<div class="ui-poptip-container">
+					 <div class="ui-poptip-arrow-left ui-poptip-arrow-bottom">
+						 <span>◆</span>
+						 <em>◆</em>
+					 </div>
+					 <div class="ui-poptip-txt"> 
+						提示3
+					 </div>
+				</div>
+				<a href="javascript:;" data-dismiss="alert" data-target="#alert-3" class="close">×</a>
+			</div>
+		</div>
+		<!-- UI-tips-end-->
+		<!-- UI-tips-start-->
+		<div class="alert ui-poptip fade in" id="alert-4">
+			<div class="ui-poptip-shadow">
+				<div class="ui-poptip-container">
+					 <div class="ui-poptip-arrow-left ui-poptip-arrow-right">
+						 <span>◆</span>
+						 <em>◆</em>
+					 </div>
+					 <div class="ui-poptip-txt"> 
+						提示4
+					 </div>
+				</div>
+				<a href="javascript:;" data-dismiss="alert" data-target="#alert-4" class="close">×</a>
+			</div>
+		</div>
+		<!-- UI-tips-end-->
+		<!-- UI-tips-start-->
+		<div class="alert ui-poptip cus-poptip fade in" id="alert-5">
+			<div class="ui-poptip-shadow">
+				<div class="ui-poptip-container">
+					 <div class="ui-poptip-arrow-left ui-poptip-arrow-right">
+						 <span>◆</span>
+						 <em>◆</em>
+					 </div>
+					 <div class="ui-poptip-txt"> 
+						提示5
+					 </div>
+				</div>
+				 <a href="javascript:;" data-dismiss="alert" data-target="#alert-5" class="close">×</a>
+			</div>
+		</div>
+		<!-- UI-tips-end-->
+	</div>
+	<div> 
+		<div class="alert fade in">
+			<a href="javascript:;" data-dismiss="alert" class="close">×</a>
+            <strong>提示：</strong> 要看清楚噢
+        </div>
+		<div class="alert alert-success fade in">
+            <a href="javascript:;" data-dismiss="alert" class="close">×</a>
+            <strong>提示：</strong> 要看清楚噢
+        </div>
+		<div class="alert alert-danger fade in">
+            <a href="javascript:;" data-dismiss="alert" class="close">×</a>
+            <strong>提示：</strong> 要看清楚噢
+        </div>
+		<div class="alert alert-info fade in">
+            <a href="javascript:;" data-dismiss="alert" class="close">×</a>
+            <strong>提示：</strong> 要看清楚噢
+        </div>
+	</div>
+</div>
 <pre class="brush: xml">
-<h3>提示信息(.ui-message)</h3>
-&lt;div class="ui-message"&gt;
-	&lt;span class="ui-icon ui-icon-uarr"&gt;&uarr;&lt;/span&gt;
-	
-	&lt;div class="ui-message-cnt ui-message-cnt-success"&gt;
-		&lt;span class="ui-icon ui-icon-rarr"&gt;&rarr;&lt;/span&gt;
-		&lt;div class="ui-message-text"&gt;內容內網&lt;/div&gt;
+<h3>浮层信息(.ui-tip)</h3>
+&lt;div class=&quot;ui-tip&quot;&gt;
+	&lt;div class=&quot;ui-tip-cnt&quot;&gt;
+		我是提示内容
 	&lt;/div&gt;
-	
-	&lt;span class="ui-icon ui-icon-darr"&gt;&darr;&lt;/span&gt;
-&lt;/div&gt; &lt;!-- .ui-message --&gt;
+	&lt;span class=&quot;ui-icon ui-icon-uarr&quot;&gt;&uarr;&lt;/span&gt;
+&lt;/div&gt; &lt;!-- .ui-tip --&gt;
 </pre>
 
+<div class="code"> 
+	<h3>tabs</h3>
+	<div class="clear"> 
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#">Home</a></li>
+		  <li><a href="#">Profile</a></li>
+		  <li><a href="#">Messages</a></li>
+		</ul>
+	</div>
+</div>
 <pre class="brush: xml">
 <h3>TAB(.ui-tab)</h3>
 &lt;div class="ui-tab"&gt;
@@ -561,18 +757,7 @@ file_put_contents('css/base.css', $less->parse());
 &lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
 </pre>
 
-<pre class="brush: xml">
-<h3>浮层信息(.ui-tip)</h3>
-&lt;div class=&quot;ui-tip&quot;&gt;
-	&lt;div class=&quot;ui-tip-cnt&quot;&gt;
-		我是提示内容
-	&lt;/div&gt;
-	&lt;span class=&quot;ui-icon ui-icon-uarr&quot;&gt;&uarr;&lt;/span&gt;
-&lt;/div&gt; &lt;!-- .ui-tip --&gt;
-</pre>
-
-<script>
-    
+<script>    
 (function(){
     var pre = document.getElementsByTagName('pre'),
         h3 = document.getElementsByTagName('h3'),

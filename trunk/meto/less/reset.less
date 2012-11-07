@@ -156,7 +156,7 @@ textarea {
 }
 
 //使textarea不能横向无限拉取
-.textarea{
+textarea{
   resize: vertical;
 }
 
@@ -164,6 +164,12 @@ button,
 input {
   *overflow: visible; // Inner spacing ie IE6/7
   line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
+}
+
+//取消onfocus的虚线框,强制手型
+a,button{
+	outline:none;
+	cursor:pointer;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner { 
