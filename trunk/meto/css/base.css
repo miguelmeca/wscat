@@ -1456,7 +1456,6 @@ legend + .control-group {
 .navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active { background-color:#000000 \9; }
 .nav {
   margin-left:0;
-  margin-bottom:18px;
   list-style:none;
 }
 .nav > li > a { display:block; }
