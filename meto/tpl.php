@@ -713,12 +713,21 @@ file_put_contents('css/base.css', $less->parse());
 
 <div class="code"> 
 	<h3>tabs</h3>
-	<div class="clear"> 
-		<ul class="nav nav-tabs">
-		  <li class="active"><a href="#">Home</a></li>
-		  <li><a href="#">Profile</a></li>
-		  <li><a href="#">Messages</a></li>
-		</ul>
+	<div> 
+		<div class="tabbable"> 
+			<ul class="nav nav-tabs clear">
+				<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+				<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+				<p>I'm in Section 1.</p>
+				</div>
+				<div class="tab-pane" id="tab2">
+				<p>Howdy, I'm in Section 2.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <pre class="brush: xml">
