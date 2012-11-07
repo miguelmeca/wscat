@@ -7,13 +7,14 @@
 // -------------------------
 
 .alert {
-  padding: 8px 35px 8px 14px;
-  margin-bottom: @baseLineHeight;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  background-color: @warningBackground;
-  border: 1px solid @warningBorder;
-  .border-radius(4px);
-  color: @warningText;
+	margin:2px 0;
+	position:relative;
+	padding: 4px 20px 4px 10px;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	background-color: @warningBackground;
+	border: 1px solid @warningBorder;
+	.border-radius(4px);
+	color: @warningText;
 }
 .alert h4 {
   margin: 0;
@@ -21,10 +22,9 @@
 
 // Adjust close link position
 .alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  line-height: @baseLineHeight;
+  position:absolute;
+  top: 5px;
+  right: 5px;
 }
 
 
@@ -35,17 +35,26 @@
   background-color: @successBackground;
   border-color: @successBorder;
   color: @successText;
+  .close{
+	color: @successText;
+  }
 }
 .alert-danger,
 .alert-error {
   background-color: @errorBackground;
   border-color: @errorBorder;
   color: @errorText;
+  .close{
+	color: @errorText;
+  }
 }
 .alert-info {
   background-color: @infoBackground;
   border-color: @infoBorder;
   color: @infoText;
+  .close{
+	color: @infoText;
+  }
 }
 
 

@@ -519,11 +519,16 @@
   .clearfix();
 }
 
-// Table columns
+// 表格列宽
 .tableColumns(@columnSpan: 1) {
   float: none; // undo default grid column styles
-  width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+  width: @gridColumnWidth * @columnSpan - 8 * @columnSpan; // 8是左右内边距
   margin-left: 0; // undo default grid column styles
+}
+
+//表单长度
+.formColumns(@columnInput: 1){
+	width:@fromWidth * @columnInput;
 }
 
 // Make a Grid
