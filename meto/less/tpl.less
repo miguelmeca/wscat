@@ -446,10 +446,10 @@ button.close {
 }
 
 .fade {
-  opacity: 0;
+  .opacity(0);
   .transition(opacity .15s linear);
   &.in {
-    opacity: 1;
+    .opacity(100);
   }
 }
 
@@ -463,4 +463,75 @@ button.close {
     height: auto;
   }
 }
+
+//tabs模块   经典样式
+.ui-tabs{
+	.tab-content{
+		border:1px solid @tabs-border;
+		border-top:none;
+		padding:5px;
+	}
+}
+//tabs模块 样式2
+.ui-pills{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+	}
+}
+//tabs模块 自定颜色
+.ui-pills-tmp{
+	.nav-pills > .active > a, .nav-pills > .active > a:hover{
+		background-color:@black;
+	}
+}
+//tabs模块 下tab
+.tabs-below{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+		border-bottom:none;
+	}
+}
+//tabs模块 左tab
+.tabs-left{
+	.tab-content{
+		float:left;
+		border-top:1px solid @tabs-border;
+		border-left:none;
+		margin-left:-2px;
+	}
+}
+//tabs模块 右tab
+.tabs-right{
+	.tab-content{
+		border-top:1px solid @tabs-border;
+		border-right:none;
+		float:right;
+		margin-right:-2px;
+	}
+}
+
+//自定义nav tabs
+.ui-tabs-cusnav{
+	.box-shadow(1px 2px 1px rgba(0, 0, 0, 0.25));      //设置外阴影
+	.navbar{
+		.navbar-inner{
+			border:1px solid @red;
+			#gradient>.vertical(#E61E17, #BF0600);
+		}
+		.nav > li > a{
+			color:#fff;
+			text-shadow:none;
+		}
+		.nav > .active > a, .nav > .active > a:hover, .nav > .active > a:focus{
+			background:#fff;
+			color:@black;
+		}
+	}
+	.tab-content{
+		border:1px solid @red;
+		border-top:none;
+	}
+}
+
+
 

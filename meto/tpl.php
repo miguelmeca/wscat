@@ -18,6 +18,8 @@ file_put_contents('css/base.css', $less->parse());
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap-transition.js"></script>
 <script type="text/javascript" src="js/bootstrap-alert.js"></script>
+<script type="text/javascript" src="js/bootstrap-tab.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
 <!--[if IE]>
    <script src="js/html5.js"></script>
    <style type="text/css">
@@ -713,18 +715,171 @@ file_put_contents('css/base.css', $less->parse());
 
 <div class="code"> 
 	<h3>tabs</h3>
-	<div> 
-		<div class="tabbable"> 
-			<ul class="nav nav-tabs clear">
-				<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
-				<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+	<div class="clear"> 
+		<div class="ui-tabs"> 
+			<ul class="nav nav-tabs clear m-link">
+				<li class="active"><a href="#tab1" data-toggle="tab">充值</a></li>
+				<li><a href="#tab2" data-toggle="tab">旅游</a></li>
+				<li><a href="#tab3" data-toggle="tab">彩票</a></li>
+				<li><a href="#tab4" data-toggle="tab">游戏</a></li>
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab1">
-				<p>I'm in Section 1.</p>
+				<div class="tab-pane fade in active" id="tab1">
+					<p>神奇的效果1</p>
 				</div>
-				<div class="tab-pane" id="tab2">
-				<p>Howdy, I'm in Section 2.</p>
+				<div class="tab-pane fade" id="tab2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tab3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tab4">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10">
+		<div class="ui-tabs ui-pills"> 
+			<ul class="nav nav-pills clear m-tmp-link">
+			  <li class="active"><a href="#tabp1" data-toggle="tab">充值</a></li>
+			  <li><a href="#tabp2" data-toggle="tab">旅游</a></li>
+			  <li><a href="#tabp3" data-toggle="tab">彩票</a></li>
+			  <li><a href="#tabp4" data-toggle="tab">游戏</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabp1">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabp2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabp3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabp4">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10">
+		<div class="ui-tabs ui-pills ui-pills-tmp"> 
+			<ul class="nav nav-pills clear m-tmp-link">
+			  <li class="active"><a href="#tabp5" data-toggle="tab">充值</a></li>
+			  <li><a href="#tabp6" data-toggle="tab">旅游</a></li>
+			  <li class="disabled"><a>彩票</a></li>
+			  <li><a href="#tabp8" data-toggle="tab">游戏</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabp5">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabp6">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabp7">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabp8">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<ul class="nav nav-tabs nav-stacked m-tmp-link" style="width:300px;">
+		  <li class="active"><a href="javascript:;">充值</a></li>
+		  <li><a href="javascript:;">旅游</a></li>
+		  <li><a href="javascript:;">彩票</a></li>
+        </ul>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs">
+			<ul class="nav nav-pills nav-stacked m-tmp-link" style="width:300px;">
+			  <li class="active"><a href="javascript:;">充值</a></li>
+			  <li><a href="javascript:;">旅游</a></li>
+			  <li><a href="javascript:;">彩票</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs ui-pills-tmp">
+			<ul class="nav nav-pills nav-stacked m-tmp-link" style="width:300px;">
+			  <li class="active"><a href="javascript:;">充值</a></li>
+			  <li><a href="javascript:;">旅游</a></li>
+			  <li><a href="javascript:;">彩票</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs tabs-below"> 
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabb1">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabb2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabb3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabb4">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+			<ul class="nav nav-tabs clear m-link">
+				<li class="active"><a href="#tabb1" data-toggle="tab">充值</a></li>
+				<li><a href="#tabb2" data-toggle="tab">旅游</a></li>
+				<li><a href="#tabb3" data-toggle="tab">彩票</a></li>
+				<li><a href="#tabb4" data-toggle="tab">游戏</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs tabs-left"> 
+			<ul class="nav nav-tabs clear m-link">
+				<li class="active"><a href="#tabl1" data-toggle="tab">充值</a></li>
+				<li><a href="#tabl2" data-toggle="tab">旅游</a></li>
+				<li><a href="#tabl3" data-toggle="tab">彩票</a></li>
+				<li><a href="#tabl4" data-toggle="tab">游戏</a></li>
+			</ul>
+			<div class="tab-content" style="height:129px;overflow:hidden;">
+				<div class="tab-pane fade in active" id="tabl1">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabl2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabl3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabl4">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs tabs-right"> 
+			<ul class="nav nav-tabs clear m-link">
+				<li class="active"><a href="#tabr1" data-toggle="tab">充值</a></li>
+				<li><a href="#tabr2" data-toggle="tab">旅游</a></li>
+				<li><a href="#tabr3" data-toggle="tab">彩票</a></li>
+				<li><a href="#tabr4" data-toggle="tab">游戏</a></li>
+			</ul>
+			<div class="tab-content" style="height:129px;overflow:hidden;">
+				<div class="tab-pane fade in active" id="tabr1">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabr2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabr3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabr4">
+					<p>神奇的效果4</p>
 				</div>
 			</div>
 		</div>
@@ -752,9 +907,139 @@ file_put_contents('css/base.css', $less->parse());
 	&lt;/div&gt;
 	
 &lt;/div&gt; &lt;!-- .ui-tab --&gt;
-
+</pre>
+<div class="code"> 
+	<h3>横向通栏</h3>
+	<div class="clear"> 
+		<div class="ui-tabs" style="width:300px;">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<ul class="nav">
+						<li class="active"><a href="#tabn1" data-toggle="tab">充值</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#tabn2" data-toggle="tab">旅游</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#tabn3" data-toggle="tab">彩票</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#tabn4" data-toggle="tab">游戏</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabn1">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabn2">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabn3">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabn4">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs" style="width:300px;">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<ul class="nav">
+						<li class="active"><a href="#tabn5" data-toggle="tab">充值</a></li>
+						<li><a href="#tabn6" data-toggle="tab">旅游</a></li>
+						<li><a href="#tabn7" data-toggle="tab">彩票</a></li>
+						<li><a href="#tabn8" data-toggle="tab">游戏</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabn5">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabn6">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabn7">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabn8">
+					<p>神奇的效果4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear mt10"> 
+		<div class="ui-tabs ui-tabs-cusnav" style="width:300px;">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<ul class="nav">
+						<li class="active"><a href="#tabn9" data-toggle="tab">充值</a></li>
+						<li><a href="#tabn10" data-toggle="tab">旅游</a></li>
+						<li><a href="#tabn11" data-toggle="tab">彩票</a></li>
+						<li><a href="#tabn12" data-toggle="tab">游戏</a></li>
+						<li><a href="#tabn13" data-toggle="tab">玩乐</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="tabn9">
+					<p>神奇的效果1</p>
+				</div>
+				<div class="tab-pane fade" id="tabn10">
+					<p>神奇的效果2</p>
+				</div>
+				<div class="tab-pane fade" id="tabn11">
+					<p>神奇的效果3</p>
+				</div>
+				<div class="tab-pane fade" id="tabn12">
+					<p>神奇的效果4</p>
+				</div>
+				<div class="tab-pane fade" id="tabn13">
+					<p>神奇的效果5</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<pre class="brush: xml">
+	<h3>横向通栏</h3>
 </pre>
 
+<div class="code"> 
+	<h3>下拉菜单</h3>
+	<div> 
+		<div class="dropdown clear">
+		    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+				<li><a tabindex="-1" href="#">充值</a></li>
+				<li><a tabindex="-1" href="#">旅游</a></li>
+				<li><a tabindex="-1" href="#">彩票</a></li>
+				<li class="divider"></li>
+				<li><a tabindex="-1" href="#">游戏</a></li>
+			</ul>
+		</div>
+		<div class="dropdown ui-dropdown-cus clear" >
+		    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+				<li><a tabindex="-1" href="#">充值</a></li>
+				<li><a tabindex="-1" href="#">旅游</a></li>
+				<li><a tabindex="-1" href="#">彩票</a></li>
+				<li><a tabindex="-1" href="#">游戏</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear"> 
+		<div class="btn-group">
+			<button data-toggle="dropdown" class="btn dropdown-toggle">下拉 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				  <li><a href="#">充值</a></li>
+				  <li><a href="#">旅游</a></li>
+				  <li><a href="#">彩票</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">游戏</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 <pre class="brush: xml">
 <h3>下拉菜单(.ui-dropdown）</h3>
 &lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
