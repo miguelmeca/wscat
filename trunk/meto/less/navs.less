@@ -1,5 +1,5 @@
 //
-// Navs
+// tabs
 // --------------------------------------------------
 
 
@@ -14,12 +14,11 @@
 // Make links block level
 .nav > li > a {
   display: block;
+  &:hover{
+	  text-decoration: none;
+	background-color: @grayLighter;
+  }
 }
-.nav > li > a:hover {
-  text-decoration: none;
-  background-color: @grayLighter;
-}
-
 // Redeclare pull classes because of specifity
 .nav > .pull-right {
   float: right;
@@ -27,8 +26,8 @@
 
 // Nav headers (for dropdowns and lists)
 .nav-header {
-  display: block;
   padding: 3px 15px;
+  display: block;
   font-size: 11px;
   font-weight: bold;
   line-height: @baseLineHeight;
@@ -266,7 +265,7 @@
 // -------------
 
 // Clear any floats
-.tabbable {
+.ui-tabs {
   .clearfix();
 }
 .tab-content {
@@ -325,13 +324,11 @@
 .tabs-right > .nav-tabs > li > a {
   min-width: 74px;
   margin-right: 0;
-  margin-bottom: 3px;
 }
 
 // Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
-  margin-right: 19px;
   border-right: 1px solid #ddd;
 }
 .tabs-left > .nav-tabs > li > a {
@@ -350,7 +347,6 @@
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  margin-left: 19px;
   border-left: 1px solid #ddd;
 }
 .tabs-right > .nav-tabs > li > a {
