@@ -20,6 +20,7 @@
 
 !function ($) {
 
+
   "use strict"; // jshint ;_;
 
 
@@ -43,7 +44,7 @@
 
     $parent = $(selector)
 
-    e && e.preventDefault()
+    e && e.preventDefault()      //阻止元素默认行为
 
     $parent.length || ($parent = $this.hasClass('alert') ? $this : $this.parent())
 
