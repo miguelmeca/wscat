@@ -20,6 +20,7 @@ file_put_contents('css/base.css', $less->parse());
 <script type="text/javascript" src="js/bootstrap-alert.js"></script>
 <script type="text/javascript" src="js/bootstrap-tab.js"></script>
 <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-mhover.js"></script>
 <!--[if IE]>
    <script src="js/html5.js"></script>
    <style type="text/css">
@@ -1452,6 +1453,20 @@ file_put_contents('css/base.css', $less->parse());
 </div>
 <pre class="brush: xml">
 <h3>图标库</h3>
+&lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
+	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
+		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;ui-dropdown-cnt&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
+</pre>
+<div class="code"> 
+	<div data-targ="#ui-show-1" data-type="mhover" style="width:40px;">显示</div>
+	<div id="ui-show-1">内容</div>
+</div>
+<pre class="brush: xml">
+<h3>通用的隐藏显示</h3>
 &lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
 	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
 		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;

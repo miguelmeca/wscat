@@ -39,6 +39,42 @@
 }
 
 /*
+ * @name: 翻转
+ * @overview: 内联class
+ * @require: null;	
+*/
+.ui-deg45,.ui-deg90,.ui-deg180,.ui-deg360{
+	.transition( .3s ease 0s);			
+}
+.ui-deg45{
+	.ui-deg-icon:hover{
+		.rotate(45deg);				
+	}
+}
+.ui-deg90{
+	.ui-deg-icon:hover{
+		.rotate(90deg);				
+	}
+}
+.ui-deg180{
+	.ui-deg-icon:hover{
+		.rotate(180deg);				
+	}
+}
+.ui-deg360{
+	.ui-deg-icon:hover{
+		.rotate(360deg);				
+	}
+}
+
+/*
+ *隐藏所有id包含元素 通配选择器
+*/
+[id^="ui-show"],[id*=" ui-show"]{
+	display:none;
+}
+
+/*
  * @name: 列表
  * @overview: 一般列表样式
  * @require: null;
@@ -83,10 +119,11 @@ ul{
 				}
 			}
 			.ui-nav-item-child{
+				.opacity(0);
+				.transition(.3s ease 0s);
 				position:absolute;
 				left:0;
 				top:24px;
-				display:none;
 				width:78px;
 				border:1px solid #ccc;
 				border-top:none;
@@ -99,7 +136,8 @@ ul{
 			}
 			&:hover{
 				.ui-nav-item-child{
-					display:block;
+					.opacity(100);
+					.transition(opacity);
 				}
 			}
 		}
