@@ -6,8 +6,9 @@
 			$(this).addClass("ie6-"+$(this).attr("type"));
 		});
 		//ie6 使用js支持[id^="ui-show"],[id*=" ui-show"]{display:none;}
-		$("[id^='ui-show']").each(function(){
-			$(this).addClass("ie6-ui-show");
-		});
+		$("[id^='ui-show']").addClass("ie6-ui-show");
+		//ie6 支持图标class通配
+		$("[class^='icon-'],[class*=' icon-']").addClass("ie6-icon");
+
 	})
 }(window.jQuery);

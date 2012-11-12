@@ -29,3 +29,20 @@ input,.uneditable-input {
 .ie6-ui-show{
 	_display:none !important;
 }
+//ie6支持图标库 inline-block 3px;
+.ie6-icon{
+	_display: inline-block;
+	_width: 14px;
+	_height: 14px;
+	_line-height: 14px;
+	_background-image: url("@{iconSpritePath}");
+	_background-repeat: no-repeat;
+	margin-right:3px;
+}
+
+//ie6 ui图标库支持
+.ui-state-default {
+	span.ui-icon{
+		margin:0 2px;
+	}
+}
