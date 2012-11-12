@@ -5,5 +5,9 @@
 		$('input').each(function(){
 			$(this).addClass("ie6-"+$(this).attr("type"));
 		});
+		//ie6 使用js支持[id^="ui-show"],[id*=" ui-show"]{display:none;}
+		$("[id^='ui-show']").each(function(){
+			$(this).addClass("ie6-ui-show");
+		});
 	})
 }(window.jQuery);
