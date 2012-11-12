@@ -2459,10 +2459,10 @@ ul.ui-nav .ui-nav-item a:hover { text-decoration:none; }
 ul.ui-nav .ui-nav-item .ui-nav-item-child {
   opacity:0;
   filter:alpha(opacity=0);
-  -webkit-transition:opacity .3s ease 0s;
-  -moz-transition:opacity .3s ease 0s;
-  -o-transition:opacity .3s ease 0s;
-  transition:opacity .3s ease 0s;
+  -webkit-transition:opacity .3s ease .2s;
+  -moz-transition:opacity .3s ease .2s;
+  -o-transition:opacity .3s ease .2s;
+  transition:opacity .3s ease .2s;
   position:absolute;
   left:-9999px;
   top:24px;
@@ -2470,15 +2470,13 @@ ul.ui-nav .ui-nav-item .ui-nav-item-child {
   border:1px solid #cccccc;
   border-top:none;
   background:#ffffff;
-  display:none;
 }
 ul.ui-nav .ui-nav-item .ui-nav-item-child li {
   height:24px;
   line-height:24px;
   text-align:center;
 }
-ul.ui-nav .ui-nav-item.hover .ui-nav-item-child {
-  display:block;
+ul.ui-nav .hover .ui-nav-item-child {
   left:0;
   opacity:1;
   filter:alpha(opacity=100);

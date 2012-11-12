@@ -85,7 +85,7 @@ file_put_contents('css/base.css', $less->parse());
 <div class="code"> 
 	<h3>导航</h3>
 	<ul class="ui-nav clear">
-		<li class="ui-nav-item">
+		<li class="ui-nav-item" data-type="mhover">
 			<a href="#">导航</a>
 			<ul class="ui-nav-item-child">
 				<li>item</li>
@@ -93,7 +93,7 @@ file_put_contents('css/base.css', $less->parse());
 				<li>item</li>
 			</ul>
 		</li>
-		<li class="ui-nav-item ui-nav-item-current">
+		<li class="ui-nav-item ui-nav-item-current" data-type="mhover">
 			<a href="#">导航</a>
 			<ul class="ui-nav-item-child">
 				<li>item</li>
@@ -101,7 +101,7 @@ file_put_contents('css/base.css', $less->parse());
 				<li>item</li>
 			</ul>
 		</li>
-		<li class="ui-nav-item">
+		<li class="ui-nav-item" data-type="mhover">
 			<a href="#">导航</a>
 			<ul class="ui-nav-item-child">
 				<li>item</li>
@@ -109,7 +109,7 @@ file_put_contents('css/base.css', $less->parse());
 				<li>item</li>
 			</ul>
 		</li>
-		<li class="ui-nav-item">
+		<li class="ui-nav-item" data-type="mhover">
 			<a href="#">导航</a>
 			<ul class="ui-nav-item-child">
 				<li>item</li>
