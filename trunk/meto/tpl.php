@@ -16,6 +16,7 @@ file_put_contents('css/base.css', $less->parse());
 <meta name="keywords" content=" ">
 <link rel="stylesheet" href="css/base.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
 <script type="text/javascript" src="js/bootstrap-transition.js"></script>
 <script type="text/javascript" src="js/bootstrap-alert.js"></script>
 <script type="text/javascript" src="js/bootstrap-tab.js"></script>
@@ -32,9 +33,6 @@ file_put_contents('css/base.css', $less->parse());
    <script>
  	 DD_belatedPNG.fix('.png-bg');
    </script>
-	<style type="text/css">
-		body { behavior: url(hover.htc); }   
-	</style>
 <![endif]-->
 <style type="text/css">
 	html{background:#f7f7f7;}
@@ -1462,8 +1460,15 @@ file_put_contents('css/base.css', $less->parse());
 &lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
 </pre>
 <div class="code"> 
-	<div data-targ="#ui-show-1" data-type="mhover" style="width:40px;">显示</div>
-	<div id="ui-show-1">内容</div>
+	<div data-type="mhover" style="width:40px;">显示
+		<div id="ui-show-2">内容</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<div data-targ="#ui-show-1" data-type="mhover" style="width:40px;">显示
+		<div id="ui-show-1">内容</div>
+	</div>
 </div>
 <pre class="brush: xml">
 <h3>通用的隐藏显示</h3>

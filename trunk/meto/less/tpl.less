@@ -21,7 +21,7 @@
 		.transition(color .3s ease 0s);
 		&:hover{
 			color:  @linkhover;
-			text-decoration:none;
+			text-decoration:underline;
 		}
 	}
 }
@@ -33,7 +33,19 @@
 		.transition(color .3s ease 0s);
 		&:hover{
 			color:  @linkhover;
-			text-decoration:none;
+			text-decoration:underline;
+		}
+	}
+}
+
+//link模块二
+.l-tmp-link{
+	a{
+		color:@linktmp2;
+		.transition(color .3s ease 0s);
+		&:hover{
+			color:  @linkhover;
+			text-decoration:underline;						
 		}
 	}
 }
@@ -65,6 +77,21 @@
 	.ui-deg-icon:hover{
 		.rotate(360deg);				
 	}
+}
+
+/*
+ * @name: css三角
+ * @overview: 内联class
+ * @require: null;	
+*/
+.ui-shape-river{
+	border-color: #666666 #F5F5F5 #F5F5F5;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 0;
 }
 
 /*
@@ -120,24 +147,26 @@ ul{
 			}
 			.ui-nav-item-child{
 				.opacity(0);
-				.transition(.3s ease 0s);
+				.transition(opacity .3s ease 0s);
 				position:absolute;
-				left:0;
+				left:-9999px;
 				top:24px;
 				width:78px;
 				border:1px solid #ccc;
 				border-top:none;
 				background:@white;
+				display:none;
 				li{
 					height:24px;
 					line-height:24px;
 					text-align:center;
 				}
 			}
-			&:hover{
+			&.hover{
 				.ui-nav-item-child{
+					display:block;
+					left:0;
 					.opacity(100);
-					.transition(opacity);
 				}
 			}
 		}
