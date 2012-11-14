@@ -1,5 +1,32 @@
 @import "base.less";
-@import "buttons.less";
-@import "forms.less";
-@import "tables.less";
-@import "pagebar.less";
+*, *:after, *:before{box-sizing:border-box;}
+.meto{
+    background: @darken;
+	font-family:@baseFontYahei;
+	.header{
+		position:fixed;
+		left:0;
+		top:0;
+		width:100%;
+		.header-context{
+			height:100px;
+			position:relative;
+			width:100%;
+			.logo{
+				position:absolute;
+				left:120px;
+				bottom:0;
+				font-size:42px;
+				color:@white;
+				h1{
+					font-weight:lighter;
+				}
+			}
+			.editor{
+				cursor: pointer;
+				float: right;
+				margin: 55px 44px 0 0;
+			}
+		}
+	}
+}
