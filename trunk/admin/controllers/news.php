@@ -13,7 +13,16 @@ class News extends Admin_Controller
 	}
 	
 	function index(){
-		redirect('/news/page');
+		$per_page = $this->input->cookie('c_page')?$this->input->cookie('c_page'):20;
+		$res=$this->news->get_all();
+		$data['news']=$this->news->get_all($per_page,$per_page)->result_array();//得到数据库记录 
+		$this->load->view('backend/news_ajax',$data);
+	}
+	
+	function ajax($offset = 0, $row_count = 0){
+		 $row_count = $this->input->cookie('c_page')?$this->input->cookie('c_page'):20;
+		 $results=$this->news->get_all($offset,$row_count)->result_array();
+		 echo json_encode($results);
 	}
 	
 	//读取数据并cookie分页
