@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=GB2312">
+	<title>Animate.css - Custom Build</title>
+	<link rel="stylesheet" href="Animate.css%20-%20Custom%20Build_files/ooc.css">
+	<link rel="stylesheet" href="Animate.css%20-%20Custom%20Build_files/animate.css">
+	<link rel="stylesheet" href="Animate.css%20-%20Custom%20Build_files/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="http://www.gravatar.com/avatar/ce22c94e6c291345223e0118bfdd8714?s=128">
+	<script src="Animate.css%20-%20Custom%20Build_files/track.js" data-site-id="4fd5ef63613f5d03c200002c" id="gauges-tracker" async="" type="text/javascript"></script><script type="text/javascript" src="Animate.css%20-%20Custom%20Build_files/txy8tmh.txt"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="Animate.css%20-%20Custom%20Build_files/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.checks :checkbox').attr('checked', true);
+			$('.checks label').hover(
+			function() {
+				var anim = $(this).html();
+				$(this).addClass(anim);
+			},
+			function() {
+				$(this).removeClass();
+			}
+			);
+		});
+
+		function toggleCheck(type) {
+			if($('.' + type + ' input:checkbox').is(':checked')) {
+				$('.' + type + ' input:checkbox' ).removeAttr('checked');
+			} else {
+				$('.' + type + ' input:checkbox' ).attr('checked', 'true');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Animate.css <small><a class="back" href="http://daneden.me/animate">- Back to home page?</a></small></h1>
+			<p><em>Custom build</em></p>
+		</header>
+		<div class="content">
+			<p>Don't want to download 2500 lines of code? I dig that. Let's make something that'll work just for you.
+			</p><hr>
+			<form action="build.php" method="post">
+				<h3>Attention seekers <small class="alignright"><a href="javascript:toggleCheck('attention');">check/uncheck all</a></small></h3>
+				<ul class="checks cf attention">
+					<li><input checked="checked" id="flash" name="flash" type="checkbox"><label for="flash">flash</label></li>
+					<li><input checked="checked" id="shake" name="shake" type="checkbox"><label for="shake">shake</label></li>
+					<li><input checked="checked" id="bounce" name="bounce" type="checkbox"><label for="bounce">bounce</label></li>
+					<li><input checked="checked" id="tada" name="tada" type="checkbox"><label for="tada">tada</label></li>
+					<li><input checked="checked" id="swing" name="swing" type="checkbox"><label for="swing">swing</label></li>
+					<li><input checked="checked" id="wobble" name="wobble" type="checkbox"><label for="wobble">wobble</label></li>
+					<li><input checked="checked" id="wiggle" name="wiggle" type="checkbox"><label for="wiggle">wiggle</label></li>
+					<li><input checked="checked" id="pulse" name="pulse" type="checkbox"><label for="pulse">pulse</label></li>
+				</ul>
+
+				<h3>Flippers <small class="alignright"><a href="javascript:toggleCheck('flippers');">check/uncheck all</a></small></h3>
+				<ul class="checks cf flippers">
+					<li><input checked="checked" id="flip" name="flip" type="checkbox"><label for="flip">flip</label></li>
+					<li><input checked="checked" id="flipInX" name="flipInX" type="checkbox"><label for="flipInX">flipInX</label></li>
+					<li><input checked="checked" id="flipOutX" name="flipOutX" type="checkbox"><label for="flipOutX">flipOutX</label></li>
+					<li><input checked="checked" id="flipInY" name="flipInY" type="checkbox"><label for="flipInY">flipInY</label></li>
+					<li><input checked="checked" id="flipOutY" name="flipOutY" type="checkbox"><label for="flipOutY">flipOutY</label></li>
+				</ul>
+
+				<h3>Fading Entrances <small class="alignright"><a href="javascript:toggleCheck('fadeIn');">check/uncheck all</a></small></h3>
+				<ul class="checks cf fadeIn">
+					<li><input checked="checked" id="fadeIn" name="fadeIn" type="checkbox"><label for="fadeIn">fadeIn</label></li>
+					<li><input checked="checked" id="fadeInUp" name="fadeInUp" type="checkbox"><label for="fadeInUp">fadeInUp</label></li>
+					<li><input checked="checked" id="fadeInDown" name="fadeInDown" type="checkbox"><label for="fadeInDown">fadeInDown</label></li>
+					<li><input checked="checked" id="fadeInLeft" name="fadeInLeft" type="checkbox"><label for="fadeInLeft">fadeInLeft</label></li>
+					<li><input checked="checked" id="fadeInRight" name="fadeInRight" type="checkbox"><label for="fadeInRight">fadeInRight</label></li>
+					<li><input checked="checked" id="fadeInUpBig" name="fadeInUpBig" type="checkbox"><label for="fadeInUpBig">fadeInUpBig</label></li>
+					<li><input checked="checked" id="fadeInDownDig" name="fadeInDownBig" type="checkbox"><label for="fadeInDownBig">fadeInDownBig</label></li>
+					<li><input checked="checked" id="fadeInLeftBig" name="fadeInLeftBig" type="checkbox"><label for="fadeInLeftBig">fadeInLeftBig</label></li>
+					<li><input checked="checked" id="fadeInRightBig" name="fadeInRightBig" type="checkbox"><label for="fadeInRightBig">fadeInRightBig</label></li>
+				</ul>
+
+				<h3>Fading Exits <small class="alignright"><a href="javascript:toggleCheck('fadeOut');">check/uncheck all</a></small></h3>
+				<ul class="checks cf fadeOut">
+					<li><input checked="checked" id="fadeOut" name="fadeOut" type="checkbox"><label for="fadeOut">fadeOut</label></li>
+					<li><input checked="checked" id="fadeOutUp" name="fadeOutUp" type="checkbox"><label for="fadeOutUp">fadeOutUp</label></li>
+					<li><input checked="checked" id="fadeOutDown" name="fadeOutDown" type="checkbox"><label for="fadeOutDown">fadeOutDown</label></li>
+					<li><input checked="checked" id="fadeOutLeft" name="fadeOutLeft" type="checkbox"><label for="fadeOutLeft">fadeOutLeft</label></li>
+					<li><input checked="checked" id="fadeOutRight" name="fadeOutRight" type="checkbox"><label for="fadeOutRight">fadeOutRight</label></li>
+					<li><input checked="checked" id="fadeOutUpBig" name="fadeOutUpBig" type="checkbox"><label for="fadeOutUpBig">fadeOutUpBig</label></li>
+					<li><input checked="checked" id="fadeOutDownBig" name="fadeOutDownBig" type="checkbox"><label for="fadeOutDownBig">fadeOutDownBig</label></li>
+					<li><input checked="checked" id="fadeOutLeftBig" name="fadeOutLeftBig" type="checkbox"><label for="fadeOutLeftBig">fadeOutLeftBig</label></li>
+					<li><input checked="checked" id="fadeOutRightBig" name="fadeOutRightBig" type="checkbox"><label for="fadeOutRightBig">fadeOutRightBig</label></li>
+				</ul>
+
+				<h3>Bouncing Entrances <small class="alignright"><a href="javascript:toggleCheck('bounceIn');">check/uncheck all</a></small></h3>
+				<ul class="checks cf bounceIn">
+					<li><input checked="checked" id="bounceIn" name="bounceIn" type="checkbox"><label for="bounceIn">bounceIn</label></li>
+					<li><input checked="checked" id="bounceInUp" name="bounceInUp" type="checkbox"><label for="bounceInUp">bounceInUp</label></li>
+					<li><input checked="checked" id="bounceInDown" name="bounceInDown" type="checkbox"><label for="bounceInDown">bounceInDown</label></li>
+					<li><input checked="checked" id="bounceInLeft" name="bounceInLeft" type="checkbox"><label for="bounceInLeft">bounceInLeft</label></li>
+					<li><input checked="checked" id="bounceInRight" name="bounceInRight" type="checkbox"><label for="bounceInRight">bounceInRight</label></li>
+				</ul>
+
+				<h3>Bouncing Exits <small class="alignright"><a href="javascript:toggleCheck('bounceOut');">check/uncheck all</a></small></h3>
+				<ul class="checks cf bounceOut">
+					<li><input checked="checked" id="bounceOut" name="bounceOut" type="checkbox"><label for="bounceOut">bounceOut</label></li>
+					<li><input checked="checked" id="bounceOutUp" name="bounceOutUp" type="checkbox"><label for="bounceOutUp">bounceOutUp</label></li>
+					<li><input checked="checked" id="bounceOutDown" name="bounceOutDown" type="checkbox"><label for="bounceOutDown">bounceOutDown</label></li>
+					<li><input checked="checked" id="bounceOutLeft" name="bounceOutLeft" type="checkbox"><label for="bounceOutLeft">bounceOutLeft</label></li>
+					<li><input checked="checked" id="bounceOutRight" name="bounceOutRight" type="checkbox"><label for="bounceOutRight">bounceOutRight</label></li>
+				</ul>
+
+				<h3>Rotating Entrances <small class="alignright"><a href="javascript:toggleCheck('rotateIn');">check/uncheck all</a></small></h3>
+				<ul class="checks cf rotateIn">
+					<li><input checked="checked" id="rotateIn" name="rotateIn" type="checkbox"><label for="rotateIn">rotateIn</label></li>
+					<li><input checked="checked" id="rotateInUpLeft" name="rotateInUpLeft" type="checkbox"><label for="rotateInUpLeft">rotateInUpLeft</label></li>
+					<li><input checked="checked" id="rotateInDownLeft" name="rotateInDownLeft" type="checkbox"><label for="rotateInDownLeft">rotateInDownLeft</label></li>
+					<li><input checked="checked" id="rotateInUpRight" name="rotateInUpRight" type="checkbox"><label for="rotateInUpRight">rotateInUpRight</label></li>
+					<li><input checked="checked" id="rotateInDownRight" name="rotateInDownRight" type="checkbox"><label for="rotateInDownRight">rotateInDownRight</label></li>
+				</ul>
+
+				<h3>Rotating Exits <small class="alignright"><a href="javascript:toggleCheck('rotateOut');">check/uncheck all</a></small></h3>
+				<ul class="checks cf rotateOut">
+					<li><input checked="checked" id="rotateOut" name="rotateOut" type="checkbox"><label for="rotateOut">rotateOut</label></li>
+					<li><input checked="checked" id="rotateOutUpLeft" name="rotateOutUpLeft" type="checkbox"><label for="rotateOutUpLeft">rotateOutUpLeft</label></li>
+					<li><input checked="checked" id="rotateOutDownLeft" name="rotateOutDownLeft" type="checkbox"><label for="rotateOutDownLeft">rotateOutDownLeft</label></li>
+					<li><input checked="checked" id="rotateOutUpRight" name="rotateOutUpRight" type="checkbox"><label for="rotateOutUpRight">rotateOutUpRight</label></li>
+					<li><input checked="checked" id="rotateOutDownRight" name="rotateOutDownRight" type="checkbox"><label for="rotateOutDownRight">rotateOutDownRight</label></li>
+				</ul>
+
+				<h3>Lightspeed <small class="alignright"><a href="javascript:toggleCheck('lightspeed');">check/uncheck all</a></small></h3>
+				<ul class="checks cf lightspeed">
+					<li><input checked="checked" id="lightSpeedIn" name="lightSpeedIn" type="checkbox"><label for="lightSpeedIn">lightSpeedIn</label></li>
+					<li><input checked="checked" id="lightSpeedOut" name="lightSpeedOut" type="checkbox"><label for="lightSpeedOut">lightSpeedOut</label></li>
+				</ul>
+
+				<h3>Specials <small class="alignright"><a href="javascript:toggleCheck('specials');">check/uncheck all</a></small></h3>
+				<ul class="checks cf specials">
+					<li><input checked="checked" id="hinge" name="hinge" type="checkbox"><label for="hinge">hinge</label></li>
+					<li><input checked="checked" id="rollIn" name="rollIn" type="checkbox"><label for="rollIn">rollIn</label></li>
+					<li><input checked="checked" id="rollOut" name="rollOut" type="checkbox"><label for="rollOut">rollOut</label></li>
+				</ul>
+				<br>
+				<input class="butt butt-blue butt-small" value="Build it" type="submit">
+			</form>
+		</div>
+			<div style="width:960px;margin:auto;"> 
+		<h3>Attention seekers <small class="alignright"><a href="javascript:toggleCheck('attention');">check/uncheck all</a></small></h3>
+		<ul class="al">
+			<li><span 3d="flash" class="animated">flash</span></li>
+			<li><span 3d="shake" class="animated">shake</span></li>
+			<li><span 3d="bounce" class="animated">bounce</span></li>
+			<li><span 3d="tada" class="animated">tada</span></li>
+			<li><span 3d="swing" class="animated">swing</span></li>
+			<li><span 3d="wobble" class="animated">wobble</span></li>
+			<li><span 3d="wiggle" class="animated">wiggle</span></li>
+			<li><span 3d="pulse" class="animated">pulse</span></li>
+		</ul>
+	</div>
+	<script type="text/javascript"> 
+		!function ($) {
+			  $(function () {
+					//全局绑定3d效果
+					$('.animated').hover(function(){
+						$(this).addClass($(this).attr("3d"));
+					},function(){
+						$(this).removeClass($(this).attr("3d"));
+					});
+			  })
+		}(window.jQuery);
+	</script>
+		<footer>
+			<p class="cf">A thing made by <a href="http://twitter.com/_dte">Dan Eden</a></p>
+		</footer>
+	</div>
+
+</body></html>

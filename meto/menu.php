@@ -14,6 +14,7 @@ file_put_contents('css/menus.css', $less->parse());
 <title>找钢网首页</title>
 <meta name="description" content=" ">
 <meta name="keywords" content=" ">
+<link rel="stylesheet" href="css/3d.css" />
 <link rel="stylesheet" href="css/menus.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap-mhover.js"></script>
@@ -29,10 +30,30 @@ file_put_contents('css/menus.css', $less->parse());
  	 DD_belatedPNG.fix('.png-bg');
    </script>
 <![endif]-->
+<style type="text/css"> 
+	.al li{
+		background: none repeat scroll 0 0 #E4F1F8;
+		border-bottom: 1px dashed #C8E4F1;
+		display: block;
+		float: left;
+		font-size: 0.9em;
+		line-height: 1;
+		list-style: none outside none;
+		margin: 0;
+		padding: 2.1%;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+		width: 29%;
+	}
+	.al span {
+		display:block;
+		width:40px;
+		height:50px;
+	}
+</style>
 </head>
 <body> 
-	<div class="head-nav clear"> 
-		<div class="nav-hd"> 
+	<div class="head-nav"> 
+		<div class="nav-hd  clear"> 
 			<div class="login-topic l-tmp-link"> 
 				欢迎来到找钢网，请<a href="#">登录</a><a href="#">免费注册</a>
 			</div>
@@ -69,5 +90,30 @@ file_put_contents('css/menus.css', $less->parse());
 			</ul>
 		</div>
 	</div>
+	<div style="width:960px;margin:auto;"> 
+		<h3>Attention seekers <small class="alignright"><a href="javascript:toggleCheck('attention');">check/uncheck all</a></small></h3>
+		<ul class="al">
+			<li><span 3d="flash" class="ui-3d">flash</span></li>
+			<li><span 3d="shake" class="ui-3d">shake</span></li>
+			<li><span 3d="bounce" class="ui-3d">bounce</span></li>
+			<li><span 3d="tada" class="ui-3d">tada</span></li>
+			<li><span 3d="swing" class="ui-3d">swing</span></li>
+			<li><span 3d="wobble" class="ui-3d">wobble</span></li>
+			<li><span 3d="wiggle" class="ui-3d">wiggle</span></li>
+			<li><span 3d="pulse" class="ui-3d">pulse</span></li>
+		</ul>
+	</div>
+	<script type="text/javascript"> 
+		!function ($) {
+			  $(function () {
+					//全局绑定3d效果
+					$('.ui-3d').hover(function(){
+						$(this).addClass($(this).attr("3d"));
+					},function(){
+						$(this).removeClass($(this).attr("3d"));
+					});
+			  })
+		}(window.jQuery);
+	</script>
 </body>
 </html>
