@@ -3051,7 +3051,7 @@ textarea, input, .uneditable-input {
   position:relative;
   background:#f5f5f5;
   border-bottom:1px solid #dcdcdc;
-  min-width:960px;
+  width:100%;
   width:auto;
   height:22px;
   line-height:22px;
