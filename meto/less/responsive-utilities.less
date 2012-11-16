@@ -1,10 +1,7 @@
 //
-// Responsive: Utility classes
+// 设置移动浏览器与桌面浏览器的隐藏显示
 // --------------------------------------------------
 
-
-// Hide from screenreaders and browsers
-// Credit: HTML5 Boilerplate
 .hidden {
   display: none;
   visibility: hidden;
@@ -12,7 +9,7 @@
 
 // Visibility utilities
 
-// For desktops
+// 桌面版
 .visible-phone     { display: none !important; }
 .visible-tablet    { display: none !important; }
 .hidden-phone      { }
@@ -20,9 +17,8 @@
 .hidden-desktop    { display: none !important; }
 .visible-desktop   { display: inherit !important; }
 
-// Tablets & small desktops only
+// 小屏版
 @media (min-width: 768px) and (max-width: 979px) {
-  // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important ; }
   // Show
@@ -31,13 +27,23 @@
   .hidden-tablet     { display: none !important; }
 }
 
-// Phones only
+// 手机版
 @media (max-width: 767px) {
-  // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
   // Show
-  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  .visible-phone     { display: inherit !important; } 
   // Hide
   .hidden-phone      { display: none !important; }
 }
+
+// 480手机版
+@media (max-width: 480px) {
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-phone     { display: inherit !important; } 
+  // Hide
+  .hidden-phone      { display: none !important; }
+}
+
