@@ -427,7 +427,7 @@ file_put_contents('css/base.css', $less->parse());
 		<tbody>
 		  <tr>
 			<td>
-				<button class="btn btn-large" type="button">默认</button>
+				<button class="btn btn-large" type="button">默认</button><span class="label">默认</span>
 				<button class="btn" type="button">默认</button>
 				<button class="btn btn-small" type="button">默认</button>
 				<button class="btn btn-mini" type="button">默认</button>
