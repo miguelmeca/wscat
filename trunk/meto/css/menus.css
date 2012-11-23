@@ -2589,6 +2589,48 @@ li.ui-state-default { float:left; }
   -o-animation-duration:2s;
   animation-duration:2s;
 }
+.label, .badge {
+  font-size:10.152px;
+  font-weight:bold;
+  line-height:14px;
+  color:#ffffff;
+  vertical-align:baseline;
+  white-space:nowrap;
+  text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+  background-color:#999999;
+}
+.label {
+  padding:1px 4px 2px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+.badge {
+  padding:1px 9px 2px;
+  -webkit-border-radius:9px;
+  -moz-border-radius:9px;
+  border-radius:9px;
+}
+a.label:hover, a.badge:hover {
+  color:#ffffff;
+  text-decoration:none;
+  cursor:pointer;
+}
+.label-important, .badge-important { background-color:#b94a48; }
+.label-important[href], .badge-important[href] { background-color:#953b39; }
+.label-warning, .badge-warning { background-color:#e3a21a; }
+.label-warning[href], .badge-warning[href] { background-color:#b58115; }
+.label-success, .badge-success { background-color:#468847; }
+.label-success[href], .badge-success[href] { background-color:#356635; }
+.label-info, .badge-info { background-color:#3a87ad; }
+.label-info[href], .badge-info[href] { background-color:#2d6987; }
+.label-inverse, .badge-inverse { background-color:#525252; }
+.label-inverse[href], .badge-inverse[href] { background-color:#393939; }
+.btn .label, .btn .badge {
+  position:relative;
+  top:-1px;
+}
+.btn-mini .label, .btn-mini .badge { top:0; }
 .m-link a {
   color:#333333;
   -webkit-transition:color .3s ease 0s;
