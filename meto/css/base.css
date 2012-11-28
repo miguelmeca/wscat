@@ -840,7 +840,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
   -moz-border-radius:0 0 6px 6px;
   border-radius:0 0 6px 6px;
 }
-form { margin:0 0 18px; }
+form { margin:0; }
 legend {
   display:block;
   width:100%;
