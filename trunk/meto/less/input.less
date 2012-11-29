@@ -1,0 +1,132 @@
+/*表单美化 */
+.ui-form-done{
+	/* -------------
+	 * 单选按钮
+	* ------------- */
+	.ui-radiowrapper {
+		display: inline-block;
+		vertical-align: middle;
+		margin:0 5px 2px 0;
+	}
+	.ui-radio {
+		background: transparent url(../images/input/radio.gif) no-repeat center top;
+		vertical-align: middle;
+		height: 19px;
+		width: 18px;
+		display:block;
+	}
+	.ui-radio-lb{
+		width:auto !important;
+	}
+	/* -------------
+	 * 选择按钮
+	 * ------------- */
+	span.ui-checkboxwrapper{
+		display:inline-block;
+		vertical-align: middle;
+		margin:0 5px 2px 0;
+	}
+	a.ui-checkbox {
+		background: transparent url(../images/input/checkbox.gif) no-repeat center top;
+		vertical-align: middle;
+		height: 19px;
+		width: 18px;
+		display:block;
+	}
+	
+/* -------------
+ * Selects
+ * ------------- */
+.ui-selectwrapper {
+	width: 45px;
+	position:relative;
+	height: 24px;
+	background:url('../images/input/select_left.gif') left top repeat-x;
+	display:inline-block;
+	vertical-align:middle;
+	border: 1px solid #ddd;
+    border-bottom: 1px solid #bbb;
+}
+
+.ui-selectwrapper div span {
+	font-size: 12px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 24px;
+	line-height: 15px;
+	padding: 3px 0 0 13px;
+	overflow: hidden;
+	cursor:pointer;
+	}
+
+.ui-selectwrapper  a.ui-selectopen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 24px;
+	height: 24px;
+	background:#fff;
+	line-height:24px;
+	text-align:center;
+	color:#3d3d3d;
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+.ui-selectwrapper ul {
+	position: absolute;
+	width: 43px;
+	top: 24px;
+	left: -1px;
+	list-style: none;
+    border:1px solid #ddd;
+    background:#fff;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:9999;
+	.border-radius(2px 2px 2px 2px);
+    .box-shadow(0 3px 5px rgba(0,0,0,0.1));
+}
+
+.ui-selectwrapper ul a {
+    overflow: hidden;
+    text-indent: 8px;
+    position: relative;
+    -moz-user-select:none;
+	-webkit-user-select:none;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.ui-selectwrapper ul a.selected {
+    background:#ededed;
+}
+
+.ui-selectwrapper ul a:hover, .ui-selectwrapper ul a.selected:hover {
+    background:#488fcd;
+    color:#fff;
+}
+
+	
+	/* -------------
+	 * 选中状态-通配单选复选
+	 * ------------- */
+	a.ui-checked { background-position: center bottom;}
+	/* -------------
+	 * 隐藏默认表单元素
+	 * ------------- */
+	.ui-hidden {
+		display: none;
+	}
+
+}
