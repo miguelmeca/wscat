@@ -148,7 +148,7 @@ file_put_contents('css/chart.css', $less->parse());
 						</tbody>
 					</table>
 					<table id="tb-tmp" style="display:none;">
-						<tr> 
+						<tr class="hover"> 
 							<td width="100"><span></span><input type="text" /></td>
 							<td width="100"><span></span><input type="text" /></td>
 							<td width="100"><span></span><input type="text" /></td>
@@ -222,6 +222,19 @@ file_put_contents('css/chart.css', $less->parse());
 										</tr>
 									</tbody>
 								</table>
+								<div class="ui-page mt5 mb5 fr clear">
+									<span class="ui-page-item ui-page-item-info">共41条记录，共5页</span>
+									<a class="ui-page-item ui-page-item-first" href="#">首页</a>
+									<a class="ui-page-item ui-page-item-prev" href="#"><i>&lt;&lt;</i>上一页</a>
+									<a class="ui-page-item ui-page-item-current" href="#">1</a>
+									<a class="ui-page-item" href="#">2</a>
+									<a class="ui-page-item" href="#">3</a>
+									<span class="ui-page-item">...</span>
+									<a class="ui-page-item" href="#">40</a>
+									<a class="ui-page-item" href="#">41</a>
+									<a class="ui-page-item ui-page-next" href="#">下一页<i>&gt;&gt;</i></a>
+									<a class="ui-page-item ui-page-last" href="#">尾页</a>
+								</div>
 							</div>
 							<div id="tab2" class="tab-pane fade">
 								<table class="f14 ui-tbitem ui-table ui-table-bordered ui-table-hover"> 
@@ -383,27 +396,27 @@ file_put_contents('css/chart.css', $less->parse());
 						<div id="tabp1" class="tab-pane fade active in">
 							<ul class="u-tl clear">
 								<li style="width:25%;"></li>
-								<li style="width:25%;">HRB335</li>
-								<li style="width:25%;">HRB400</li>
-								<li style="width:25%;">HRB400E</li>
+								<li style="width:23%;">HRB335</li>
+								<li style="width:23%;">HRB400</li>
+								<li style="width:23%;">HRB400E</li>
 							</ul>
 							<dl class="u-item clear">
 								<dt style="width:25%;">10</dt>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
 							</dl>
 							<dl class="u-item clear">
 								<dt style="width:25%;">14</dt>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
 							</dl>
 							<dl class="u-item clear">
 								<dt style="width:25%;">16</dt>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
-								<dd><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
+								<dd class="c-item"><span>黄海 3600</span><span>沙钢 3200</span></dd>
 							</dl>
 						</div>
 						<div id="tabp2" class="tab-pane fade">
@@ -491,102 +504,101 @@ file_put_contents('css/chart.css', $less->parse());
 	</div>
 <script type="text/javascript">
 	$(function () {
-		var chart;
+		var chart,
+		colors = Highcharts.getOptions().colors,
+		categories = ['<a href="#">望天</a>', '<a href="#">宏泰</a>', '<a href="#">瑞星</a>', '<a href="#">哲钢</a>', '<a href="#">天启</a>','<a href="#">龙华</a>','<a href="#">鞍钢</a>','<a href="#">马钢</a>','<a href="#">天钢</a>','<a href="#">万钢</a>','<a href="#">水钢</a>','<a href="#">猛钢</a>','<a href="#">日钢</a>','<a href="#">风钢</a>'],
+		name = '',
+		data = [{
+				y: 3380,
+				color: colors[0],
+				drilldown: {
+					color: colors[0]
+				}
+			}, {
+				y: 3320,
+				color: colors[1],
+				drilldown: {
+					color: colors[1]
+				}
+			}, {
+				y: 2540,
+				color: colors[2],
+				drilldown: {
+					color: colors[2]
+				}
+			}, {
+				y: 2320,
+				color: colors[3],
+				drilldown: {
+					color: colors[3]
+				}
+			}, {
+				y: 2500,
+				color: colors[4],
+				drilldown: {
+					color: colors[4]
+				}
+			}, {
+				y: 2500,
+				color: colors[5],
+				drilldown: {
+					color: colors[5]
+				}
+			}, {
+				y: 2500,
+				color: colors[6],
+				drilldown: {
+					color: colors[6]
+				}
+			}, {
+				y: 3400,
+				color: colors[1],
+				drilldown: {
+					color: colors[1]
+				}
+			}, {
+				y: 3300,
+				color: colors[2],
+				drilldown: {
+					color: colors[2]
+				}
+			}, {
+				y: 3200,
+				color: colors[3],
+				drilldown: {
+					color: colors[3]
+				}
+			}, {
+				y: 3500,
+				color: colors[4],
+				drilldown: {
+					color: colors[5]
+				}
+			}, {
+				y: 1500,
+				color: colors[6],
+				drilldown: {
+					color: colors[6]
+				}
+			}, {
+				y: 4500,
+				color: colors[1],
+				drilldown: {
+					color: colors[1]
+				}
+			}];
+
+	function setChart(name, categories, data, color) {
+		chart.xAxis[0].setCategories(categories, false);
+		chart.series[0].remove(false);
+		chart.addSeries({
+			name: name,
+			data: data,
+			color: color || '#0B72A4'
+		}, false);
+		chart.redraw();
+	}
 		$(document).ready(function() {
-			var colors = Highcharts.getOptions().colors,
-				categories = ['<a href="#">望天</a>', '<a href="#">宏泰</a>', '<a href="#">瑞星</a>', '<a href="#">哲钢</a>', '<a href="#">天启</a>','<a href="#">龙华</a>','<a href="#">鞍钢</a>','<a href="#">马钢</a>','<a href="#">天钢</a>','<a href="#">万钢</a>','<a href="#">水钢</a>','<a href="#">猛钢</a>','<a href="#">日钢</a>','<a href="#">风钢</a>'],
-				name = '',
-				data = [{
-						y: 3380,
-						color: colors[0],
-						drilldown: {
-							color: colors[0]
-						}
-					}, {
-						y: 3320,
-						color: colors[1],
-						drilldown: {
-							color: colors[1]
-						}
-					}, {
-						y: 2540,
-						color: colors[2],
-						drilldown: {
-							color: colors[2]
-						}
-					}, {
-						y: 2320,
-						color: colors[3],
-						drilldown: {
-							color: colors[3]
-						}
-					}, {
-						y: 2500,
-						color: colors[4],
-						drilldown: {
-							color: colors[4]
-						}
-					}, {
-						y: 2500,
-						color: colors[5],
-						drilldown: {
-							color: colors[5]
-						}
-					}, {
-						y: 2500,
-						color: colors[6],
-						drilldown: {
-							color: colors[6]
-						}
-					}, {
-						y: 3400,
-						color: colors[1],
-						drilldown: {
-							color: colors[1]
-						}
-					}, {
-						y: 3300,
-						color: colors[2],
-						drilldown: {
-							color: colors[2]
-						}
-					}, {
-						y: 3200,
-						color: colors[3],
-						drilldown: {
-							color: colors[3]
-						}
-					}, {
-						y: 3500,
-						color: colors[4],
-						drilldown: {
-							color: colors[5]
-						}
-					}, {
-						y: 1500,
-						color: colors[6],
-						drilldown: {
-							color: colors[6]
-						}
-					}, {
-						y: 4500,
-						color: colors[1],
-						drilldown: {
-							color: colors[1]
-						}
-					}];
-		
-			function setChart(name, categories, data, color) {
-				chart.xAxis[0].setCategories(categories, false);
-				chart.series[0].remove(false);
-				chart.addSeries({
-					name: name,
-					data: data,
-					color: color || 'white'
-				}, false);
-				chart.redraw();
-			}
-		
 			chart = new Highcharts.Chart({
 				chart: {
 					renderTo: 'chart-box',
@@ -610,18 +622,6 @@ file_put_contents('css/chart.css', $less->parse());
 				plotOptions: {
 					column: {
 						cursor: 'pointer',
-						point: {
-							events: {
-								click: function() {
-									var drilldown = this.drilldown;
-									if (drilldown) { // drill down
-										setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
-									} else { // restore
-										setChart(name, categories, data);
-									}
-								}
-							}
-						},
 						dataLabels: {
 							enabled: true,
 							color: colors[0],
@@ -681,6 +681,98 @@ file_put_contents('css/chart.css', $less->parse());
 		//新增一行
 		$(".add-row").click(function(){
 			$('#tb-tmp tr').clone().appendTo('#edit-tb tbody');
+		});
+		//变换图表
+		$(".c-item").click(function(){
+			//去除所有其他类样式
+			$(".c-item").each(function(){
+				if($(this).hasClass('active')){
+					$(this).removeClass('active');
+				}
+			});
+			$(this).addClass('active');
+			var cats=['<a href="#">型天</a>', '<a href="#">宏泰</a>', '<a href="#">瑞星</a>', '<a href="#">哲钢</a>', '<a href="#">天启</a>','<a href="#">龙华</a>','<a href="#">鞍钢</a>','<a href="#">马钢</a>','<a href="#">天钢</a>','<a href="#">万钢</a>','<a href="#">水钢</a>','<a href="#">猛钢</a>','<a href="#">日钢</a>','<a href="#">风钢</a>'];
+			var dats = [{
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[0],
+						drilldown: {
+							color: colors[0]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[1],
+						drilldown: {
+							color: colors[1]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[2],
+						drilldown: {
+							color: colors[2]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[3],
+						drilldown: {
+							color: colors[3]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[4],
+						drilldown: {
+							color: colors[4]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[5],
+						drilldown: {
+							color: colors[5]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[6],
+						drilldown: {
+							color: colors[6]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[1],
+						drilldown: {
+							color: colors[1]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[2],
+						drilldown: {
+							color: colors[2]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[3],
+						drilldown: {
+							color: colors[3]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[4],
+						drilldown: {
+							color: colors[5]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[6],
+						drilldown: {
+							color: colors[6]
+						}
+					}, {
+						y: Math.floor(Math.random()*10000+1),
+						color: colors[1],
+						drilldown: {
+							color: colors[1]
+						}
+					}];
+			//重载图表数据
+			setChart(name, cats, dats);
 		});
 	});
 </script>

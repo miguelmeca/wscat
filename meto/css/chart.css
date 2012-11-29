@@ -3257,8 +3257,9 @@ textarea, input, .uneditable-input {
   text-decoration:none;
 }
 .main .s-l .s-box .s-coms .span-v {
-  display:inline-block;
+  display:inline;
   vertical-align:middle;
+  padding-left:10px;
 }
 .main .s-l .s-box .s-coms .new { top:10px; }
 .main .s-r { width:25%; }
@@ -3289,7 +3290,7 @@ textarea, input, .uneditable-input {
   -webkit-box-sizing:border-box;
   -ms-box-sizing:border-box;
   float:left;
-  width:25%;
+  width:23%;
   cursor:pointer;
   border:1px solid #ffffff;
 }

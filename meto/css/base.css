@@ -239,7 +239,7 @@ table {
   border-top:1px solid #dddddd;
 }
 .ui-table th { font-weight:bold; }
-.ui-table thead th { vertical-align:bottom; }
+.ui-table thead th { vertical-align:middle; }
 .ui-table caption + thead tr:first-child th, .ui-table caption + thead tr:first-child td, .ui-table colgroup + thead tr:first-child th, .ui-table colgroup + thead tr:first-child td, .ui-table thead:first-child tr:first-child th, .ui-table thead:first-child tr:first-child td { border-top:0; }
 .ui-table tbody + tbody { border-top:2px solid #dddddd; }
 .table-condensed th, .table-condensed td { padding:4px 5px; }
