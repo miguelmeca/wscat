@@ -17,6 +17,7 @@ file_put_contents('css/chart.css', $less->parse());
 <link rel="stylesheet" href="css/3d.css" />
 <link rel="stylesheet" href="css/chart.css" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
 <script type="text/javascript" src="js/bootstrap-transition.js"></script>
 <script type="text/javascript" src="js/bootstrap-alert.js"></script>
 <script type="text/javascript" src="js/bootstrap-tab.js"></script>

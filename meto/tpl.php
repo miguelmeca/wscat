@@ -2123,6 +2123,68 @@ file_put_contents('css/base.css', $less->parse());
             <div title="0x01CE" class="unicode">&amp;#462;</div>
           </li>
         </ul>
+		<ul class="font-lists clear">
+			<li><i class="iconawefont">&#xf000;</i></li>
+			<li><i class="iconawefont">&#xf001;</i></li>
+			<li><i class="iconawefont">&#xf002;</i></li>
+			<li><i class="iconawefont">&#xf003;</i></li>
+			<li><i class="iconawefont">&#xf004;</i></li>
+			<li><i class="iconawefont">&#xf005;</i></li>
+			<li><i class="iconawefont">&#xf006;</i></li>
+			<li><i class="iconawefont">&#xf007;</i></li>
+			<li><i class="iconawefont">&#xf008;</i></li>
+			<li><i class="iconawefont">&#xf009;</i></li>
+			<li><i class="iconawefont">&#xf00a;</i></li>
+			<li><i class="iconawefont">&#xf00b;</i></li>
+			<li><i class="iconawefont">&#xf00c;</i></li>
+			<li><i class="iconawefont">&#xf00d;</i></li>
+			<li><i class="iconawefont">&#xf00e;</i></li>
+			<li><i class="iconawefont">&#xf010;</i></li>
+			<li><i class="iconawefont">&#xf011;</i></li>
+			<li><i class="iconawefont">&#xf012;</i></li>
+			<li><i class="iconawefont">&#xf013;</i></li>
+			<li><i class="iconawefont">&#xf014;</i></li>
+			<li><i class="iconawefont">&#xf015;</i></li>
+			<li><i class="iconawefont">&#xf016;</i></li>
+			<li><i class="iconawefont">&#xf017;</i></li>
+			<li><i class="iconawefont">&#xf018;</i></li>
+			<li><i class="iconawefont">&#xf019;</i></li>
+			<li><i class="iconawefont">&#xf01a;</i></li>
+			<li><i class="iconawefont">&#xf01b;</i></li>
+			<li><i class="iconawefont">&#xf01c;</i></li>
+			<li><i class="iconawefont">&#xf01d;</i></li>
+			<li><i class="iconawefont">&#xf01e;</i></li>
+			<li><i class="iconawefont">&#xf020;</i></li>
+			<li><i class="iconawefont">&#xf021;</i></li>
+			<li><i class="iconawefont">&#xf022;</i></li>
+			<li><i class="iconawefont">&#xf023;</i></li>
+			<li><i class="iconawefont">&#xf024;</i></li>
+			<li><i class="iconawefont">&#xf025;</i></li>
+			<li><i class="iconawefont">&#xf026;</i></li>
+			<li><i class="iconawefont">&#xf027;</i></li>
+			<li><i class="iconawefont">&#xf028;</i></li>
+			<li><i class="iconawefont">&#xf029;</i></li>
+			<li><i class="iconawefont">&#xf02a;</i></li>
+			<li><i class="iconawefont">&#xf02b;</i></li>
+			<li><i class="iconawefont">&#xf02c;</i></li>
+			<li><i class="iconawefont">&#xf02d;</i></li>
+			<li><i class="iconawefont">&#xf02e;</i></li>
+			<li><i class="iconawefont">&#xf030;</i></li>
+			<li><i class="iconawefont">&#xf031;</i></li>
+			<li><i class="iconawefont">&#xf032;</i></li>
+			<li><i class="iconawefont">&#xf033;</i></li>
+			<li><i class="iconawefont">&#xf034;</i></li>
+			<li><i class="iconawefont">&#xf035;</i></li>
+			<li><i class="iconawefont">&#xf036;</i></li>
+			<li><i class="iconawefont">&#xf037;</i></li>
+			<li><i class="iconawefont">&#xf038;</i></li>
+			<li><i class="iconawefont">&#xf039;</i></li>
+			<li><i class="iconawefont">&#xf03a;</i></li>
+			<li><i class="iconawefont">&#xf03b;</i></li>
+			<li><i class="iconawefont">&#xf03c;</i></li>
+			<li><i class="iconawefont">&#xf03d;</i></li>
+			<li><i class="iconawefont">&#xf03e;</i></li>
+		</ul>
 </div>
 <pre class="brush: xml">
 <h3>字体图标</h3>
