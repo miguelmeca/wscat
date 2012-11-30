@@ -23,8 +23,25 @@
     url("@{iconfontpath}.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url("@{iconfontpath}.svg#svgFontName") format("svg"); /* iOS 4.1- */
 }
+
+@font-face {
+    font-family: "fontawefont";
+    src: url("@{iconfontawepath}.eot"); /* IE9*/
+    src: url("@{iconfontawepath}.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("@{iconfontawepath}.woff") format("woff"), /* chrome、firefox */
+    url("@{iconfontawepath}.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("@{iconfontawepath}.svg#svgFontName") format("svg"); /* iOS 4.1- */
+}
+
+
 .iconfont {
     font-family: "uxiconfont";
+    font-size: 16px;
+    font-style: normal;
+}
+
+.iconawefont {
+    font-family: "fontawefont";
     font-size: 16px;
     font-style: normal;
 }

@@ -1,0 +1,48 @@
+//
+// ie6选择器BUG
+// --------------------------------------------------
+
+//forms.less
+select,textarea,input,.uneditable-input{
+	_display: inline-block;
+	_height: @baseLineHeight;
+	_padding: 4px 6px;
+	_font-size: @baseFontSize;
+	_line-height: @baseLineHeight;
+	_color: @gray;
+}
+textarea,
+input,.uneditable-input {
+	_background-color: @inputBackground;
+	_border: 1px solid @inputBorder;
+}
+.ie6-radio,.ie6-checkbox{
+	_margin: 4px 0 0;
+	_margin-top: 0;
+	_line-height: normal;
+	_cursor: pointer;
+	}
+.ie6-file,.ie6-image,.ie6-submit,.ie6-reset,.ie6-button,.ie6-radio,.ie6-checkbox{
+	_width:auto;
+}
+//支持通配选择器
+.ie6-ui-show{
+	_display:none !important;
+}
+//ie6支持图标库 inline-block 3px;
+.ie6-icon{
+	_display: inline-block;
+	_width: 14px;
+	_height: 14px;
+	_line-height: 14px;
+	_background-image: url("@{iconSpritePath}");
+	_background-repeat: no-repeat;
+	margin-right:3px;
+}
+
+//ie6 ui图标库支持
+.ui-state-default {
+	span.ui-icon{
+		margin:0 2px;
+	}
+}
