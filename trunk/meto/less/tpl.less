@@ -50,6 +50,11 @@
 	}
 }
 
+//渐变类
+.ui-deg{
+	.transition( .3s ease 0s);
+}
+
 /*
  * @name: 翻转
  * @overview: 内联class
@@ -596,6 +601,28 @@ button.close {
 	.tab-content{
 		border:1px solid @red;
 		border-top:none;
+	}
+}
+
+//dropdown-list
+.ui-dropdown{
+	background:none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+	_background:#fff;
+	border:1px solid #efefef;
+	font-size:14px;
+	padding:8px 0;
+	a{
+		display:block;
+		color:#333;
+	    height: 32px;
+		line-height: 32px;
+		padding: 0 32px 0 13px;
+		white-space: nowrap;
+		&:hover{
+			background: #17b3ee;
+			color: #fff;
+			text-decoration:none;
+		}
 	}
 }
 

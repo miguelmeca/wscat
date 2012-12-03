@@ -41,8 +41,8 @@ file_put_contents('css/base.css', $less->parse());
 	.preview{width:800px;padding:20px 25px;margin-bottom:10px;font:12px/1.5 Courier, "Courier New", Arial, sans-serif;border:1px dotted #aaa;background:#fff;white-space:pre-wrap;ord-wrap:break-word;word-break:break-all;*zoom:1;}
 	.preview h3{font:500 16px 'Microsoft Yahei';margin:0;color:#c30;}
 	
-	#g{width:250px;padding:15px 25px;background:#eee;border:1px solid #bbb;position:fixed;right:10px;top:18px;}
-	#shortcut li{color:#888;margin-left:2em;font:italic 14px/1.6 Courier, 'Courier New';}
+	#g{width:150px;padding:10px 15px;background:#eee;border:1px solid #bbb;position:fixed;right:10px;top:18px;height:500px;overflow:auto;}
+	#shortcut li{color:#888;margin-left:2em;font:italic 12px/1.6 Courier, 'Courier New';}
 	#shortcut a{color:#464646;font-style:normal;text-decoration:none;text-shadow:1px 1px 2px #fff;}
 	#shortcut a:hover{text-decoration:underline;}
 	.code{font-size:12px;border:1px solid #eee;border-left-width:5px;font-family:"微软雅黑";margin:15px 0;padding:10px;background:#fbfbfb;}
@@ -2188,6 +2188,22 @@ file_put_contents('css/base.css', $less->parse());
 </div>
 <pre class="brush: xml">
 <h3>字体图标</h3>
+&lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
+	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
+		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;ui-dropdown-cnt&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
+</pre>
+<ul class="ui-dropdown" style="width:200px;">
+	<li><a class="ui-deg" href="#">组图展区</a></li>
+	<li><a class="ui-deg" href="#">单张展区</a></li>
+	<li><a class="ui-deg" href="#">最受喜欢</a></li>
+	<li><a class="ui-deg" href="#">社区精品</a></li>
+</ul>
+<pre class="brush: xml">
+<h3>dropdownlist</h3>
 &lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
 	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
 		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
