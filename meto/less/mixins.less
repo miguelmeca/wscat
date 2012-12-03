@@ -17,6 +17,22 @@
   }
 }
 
+// 设置为盒子模型
+.border-box(){
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+}
+
+// ie6,7按钮会被拉宽bug
+.ie-button-vis(){
+	width: auto;
+    _width: 0;
+    overflow:visible !ie;
+}
+
 // webkit核心focus效果方法
 // ------------------
 .tab-focus() {
