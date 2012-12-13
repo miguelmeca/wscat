@@ -49,6 +49,15 @@
 	_overflow:hidden;
 }
 
+//  inline-block双倍边距BUG fuck ie!
+.ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+  _margin-left: .3em;
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
 
 // webkit核心focus效果方法
 // ------------------
@@ -82,14 +91,6 @@
   *zoom: 1;
 }
 
-// IE7 inline-block双倍边距BUG
-.ie7-restore-left-whitespace() {
-  *margin-left: .3em;
-  _margin-left: .3em;
-  &:first-child {
-    *margin-left: 0;
-  }
-}
 
 .ie7-restore-right-whitespace() {
   *margin-right: .3em;
