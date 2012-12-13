@@ -22,6 +22,8 @@ file_put_contents('css/base.css', $less->parse());
 <script type="text/javascript" src="js/bootstrap-tab.js"></script>
 <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
 <script type="text/javascript" src="js/bootstrap-mhover.js"></script>
+<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
 <!--[if IE]>
    <script src="js/html5.js"></script>
    <style type="text/css">
@@ -2204,6 +2206,60 @@ file_put_contents('css/base.css', $less->parse());
 </ul>
 <pre class="brush: xml">
 <h3>dropdownlist</h3>
+&lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
+	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
+		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;ui-dropdown-cnt&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
+</pre>
+<div class="code"> 
+	<div class="bs-docs-example tooltip-demo">
+		<style type="text/css"> 
+			.bs-docs-tooltip-examples li{float:left;margin-right:5px;}
+		</style>
+		<ul class="bs-docs-tooltip-examples clear">
+		  <li><a href="#" rel="tooltip" data-placement="top" title="Tooltip on top">上tip</a></li>
+		  <li><a href="#" rel="tooltip" data-placement="right" title="Tooltip on right">右tip</a></li>
+		  <li><a href="#" rel="tooltip" data-placement="bottom" title="Tooltip on bottom">底tip</a></li>
+		  <li><a href="#" rel="tooltip" data-placement="left" title="Tooltip on left">左tip</a></li>
+		</ul>
+		<script type="text/javascript"> 
+			 $('.tooltip-demo').tooltip({
+				selector: "a[rel=tooltip]"
+				}); 
+		</script>
+	 </div>
+</div>
+<pre class="brush: xml">
+<h3>tool-tip</h3>
+&lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
+	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
+		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;ui-dropdown-cnt&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt; &lt;!-- .ui-dropdown --&gt;
+</pre>
+<div class="code"> 
+	<div class="bs-docs-example popover-demo">
+		<style type="text/css"> 
+			.bs-docs-pop-over-examples li{float:left;margin-right:5px;}
+		</style>
+		<ul class="bs-docs-pop-over-examples clear" style="padding-left:200px;">
+		  <li><a href="#" rel="popover" data-trigger="hover"  data-placement="top" title="A Title" data-content="And here's some amazing content. It's very engaging. right?" title="123">上tip</a></li>
+		  <li><a href="#" rel="popover" data-trigger="hover"  data-placement="right" title="A Title" data-content="And here's some amazing content. It's very engaging. right?" title="123">右tip</a></li>
+		  <li><a href="#" rel="popover" data-trigger="hover"  data-placement="bottom" title="A Title" data-content="And here's some amazing content. It's very engaging. right?" title="123">下tip</a></li>
+		  <li><a href="#" rel="popover" data-trigger="hover"  data-placement="left" title="A Title" data-content="And here's some amazing content. It's very engaging. right?" title="123">左tip</a></li>
+		</ul>
+		<script type="text/javascript"> 
+			$("a[rel=popover]").popover(); 
+		</script>
+	 </div>
+</div>
+<pre class="brush: xml">
+<h3>pop-over</h3>
 &lt;div class=&quot;ui-dropdown ui-dropdown-active&quot;&gt;
 	&lt;div class=&quot;ui-dropdown-header&quot;&gt;
 		&lt;a href=&quot;#&quot;&gt;请选择xxx&lt;/a&gt;
