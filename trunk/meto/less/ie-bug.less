@@ -1,0 +1,20 @@
+//
+// ie BUG
+// property:all-ie\9; property:gte-ie8\0;*property:lte-ie7; +property:ie7; _property:ie6;
+// --------------------------------------------------
+
+//ie form内haslayout元素双倍margin bug
+.ie-code{
+	padding:10px;
+	border:1px solid #dcdcdc;
+	.ie-form-demo{
+		div{
+			margin-left:30px;
+			input{
+				border:1px solid #dcdcdc;
+				margin-left:0px;
+			}
+		}
+	}
+}
+

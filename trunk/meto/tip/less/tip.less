@@ -1,0 +1,157 @@
+/*!
+	my menu css  ryanni
+ */
+// CSS 变量
+@import "variables.less"; 
+
+//CSS 方法集
+@import "mixins.less";
+ 
+ // CSS 重置
+@import "reset.less";
+
+ //css alerts模板
+@import "alerts.less";
+  /* 
+ * @name: tips 
+ * @overview: 淘宝网页tips
+ * @require: null
+ */
+ .ui-poptip{
+	margin:0;
+	padding: 0;
+	text-shadow: none; 
+	color:@poptip-color;
+	background:none;
+	border:none;
+	.ui-poptip-shadow{
+		background-color: @poptip-bg-sd;
+		.border-radius(2px);
+		float: left;
+		padding: 2px;
+		position:relative;
+		.ui-poptip-container{
+			background-color: @poptip-bg;
+			border: 1px solid @poptip-border;
+			.border-radius(2px);
+			float: left;
+			padding: 5px 22px 5px 10px;
+			position: relative;
+			.ui-poptip-arrow-left{
+				color:@poptip-border;
+			    left: -7px;
+				top: 5px;
+				position:absolute;
+				em,span{
+				    font-family: "SimSun";
+					font-size: 14px;
+					position: absolute;
+				}
+				em{
+				  left: -1px;
+				  top: 0;
+				}
+				span{
+					color: #FFFCEF;
+					left: 0;
+					top: 0;
+					z-index:@zindexTooltip;
+				}
+			}
+			.ui-poptip-arrow-top{
+				right:35px;
+				top:-9px;
+				*top:-7px;
+				left:auto;
+				em{
+					left:0;
+					top:-1px;
+				}
+			}
+			.ui-poptip-arrow-bottom{
+				left:auto;
+				right:35px;
+				top:auto;
+				bottom:9px;
+				*bottom:7px;
+				em{
+					left:0;
+					top:1px;
+				}
+			}
+			.ui-poptip-arrow-right{
+				right:6px;
+				top:5px;
+				left:auto;
+				em{
+					left:1px;
+					top:0;
+				}
+			}
+			.ui-poptip-txt{
+				font-size:12px;
+				font-family:@baseFontYahei;
+			}
+		}
+		.close{
+			position: absolute;
+			right: 5px;
+			top: 5px;
+		}
+	}
+	//自定义颜色的浮层
+	&.cus-poptip{
+		color:@black;
+		.ui-poptip-shadow{
+			background-color:  #ccc;
+			.ui-poptip-container{
+				border:1px solid @black;
+				background-color: @white;
+				.ui-poptip-arrow-left{
+					color:@black;
+				}
+			}
+			.close{
+				color: @black;
+			}
+		}
+	}
+}
+
+//
+// 关闭按钮
+// --------------------------------------------------
+a.close,button.close {
+	z-index:@zindexClose;
+	color: @poptip-color;
+	font-family: tahoma;
+	font-size: 14px;
+	height: 12px;
+	line-height: 10px;
+	overflow: hidden;
+	text-align: center;
+	width: 12px;
+	.transition( .3s ease 0s);			//延迟
+	&:hover{
+		.rotate(360deg);				//旋转
+		.opacity(80);
+		text-decoration: none;	
+	}
+}
+
+// 关闭 隐藏与显示
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.fade {
+  .opacity(0);
+  .transition(opacity .15s linear);
+  &.in {
+    .opacity(100);
+  }
+}
