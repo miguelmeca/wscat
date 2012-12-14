@@ -27,6 +27,7 @@ file_put_contents('css/base.css', $less->parse());
    <script>
  	 DD_belatedPNG.fix('.png-bg');
    </script>
+   
 <![endif]-->
 </head>
 <body> 	
@@ -36,33 +37,33 @@ file_put_contents('css/base.css', $less->parse());
 	<div class="bs-docs-example bs-docs-example-popover">
           <div class="popover top">
             <div class="arrow"></div>
-            <h3 class="popover-title">Popover top</h3>
+            <h3 class="popover-title">Popover 上</h3>
             <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p>O NO!</p>
             </div>
           </div>
 
           <div class="popover right">
             <div class="arrow"></div>
-            <h3 class="popover-title">Popover right</h3>
+            <h3 class="popover-title">Popover 右</h3>
             <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p>O NO!</p>
             </div>
           </div>
 
           <div class="popover bottom">
             <div class="arrow"></div>
-            <h3 class="popover-title">Popover bottom</h3>
+            <h3 class="popover-title">Popover 下</h3>
             <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p>O NO!</p>
             </div>
           </div>
 
           <div class="popover left">
             <div class="arrow"></div>
-            <h3 class="popover-title">Popover left</h3>
+            <h3 class="popover-title">Popover 左</h3>
             <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p>O NO!</p>
             </div>
           </div>
 
