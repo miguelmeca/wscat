@@ -626,5 +626,44 @@ button.close {
 	}
 }
 
+//placeholder模拟
 
+.placeholding-input{
+	display:block;
+	height:30px;
+	width:270px;
+	overflow: visible;
+    position: relative;
+	.ui-input{
+		width:266px;
+		height:20px;
+		&:focus+.placeholder{
+			.opacity(60);
+		}
+	}
+	.placeholder{
+		-moz-user-select: none;
+		position: absolute;
+		bottom: 1px;
+		right: 1px;
+		top: 1px;
+		left: 2px;
+		color: #999999;
+		cursor: text;
+		font-size: 13px;
+		height: 20px;
+		line-height: 20px;
+		padding: 4px;
+		.transition(opacity 0.1s ease 0s, font-size 0.1s ease 0s);			//显示
+		white-space: nowrap;
+		z-index: 1;
+	}
+	&.hasfoucs{
+		.placeholder{
+			font-size: 0 !important;
+			.opacity(0);
+			z-index: -1;
+		}
+	}
+}
 

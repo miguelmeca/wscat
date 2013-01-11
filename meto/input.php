@@ -15,6 +15,7 @@ file_put_contents('css/base.css', $less->parse());
 <meta name="description" content=" ">
 <meta name="keywords" content=" ">
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/in.js"></script>
 <script type="text/javascript" src="js/transform.js"></script>
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/jqtransform.css" />
@@ -35,10 +36,10 @@ file_put_contents('css/base.css', $less->parse());
 	<div class="ui-form-panel ui-form-cross">
 		<div class="ui-form-item">
 			<label for="" class="ui-label">输入框</label>
-			<input type="text" placeholder="我是输入框" class="ui-input ie6-text" id="">
-			<input type="text" placeholder="我是输入框" class="ui-input ui-input-warning ie6-text" id="">
-			<input type="text" placeholder="我是输入框" class="ui-input ui-input-error ie6-text" id="">
-			<input type="text" placeholder="我是输入框" class="ui-input ui-input-success ie6-text" id="">
+			<input type="text" placeholder="我是输入框" class="ui-input" id="">
+			<input type="text" placeholder="我是输入框" class="ui-input ui-input-warning " id="">
+			<input type="text" placeholder="我是输入框" class="ui-input ui-input-error" id="">
+			<input type="text" placeholder="我是输入框" class="ui-input ui-input-success" id="">
 			<span class="ui-form-explain error">输入错误</span>
 		</div>
 		<div class="ui-form-item">
@@ -62,6 +63,17 @@ file_put_contents('css/base.css', $less->parse());
 				<option value="opt1">李四</option>
 			</select>
 		</div>
+		<div> 
+			<div class="placeholding-input">
+				<input type="text" class="ui-input" id="name">
+				<label class="placeholder" for="name">全名</label>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript"> 
+		In.ready(function(){
+
+		});
+	</script>
 </body>
 </html>
