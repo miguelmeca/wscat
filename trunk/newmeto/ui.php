@@ -435,7 +435,7 @@ file_put_contents('css/base.css', $less->parse());
 			<div class="ui-asideMenu">
 				<div class="ui-aside"> 
 					<ul> 
-						<li class="item-Menu m-linkB"> 
+						<li class="item-Menu m-linkB" data-type="mhover"> 
 							<div class="item-hd">
 								<h3> 
 									<i class="iconfont">k</i>
@@ -460,11 +460,25 @@ file_put_contents('css/base.css', $less->parse());
 									<a href="#">毛衣</a>
 								</p>
 							</div>
+							<div class="ui-category"> 
+								<div id="sub-view-1" class="sub-view sub-view1 m-linkA"> 
+									<ul class="view-list">
+										<li>
+											<dl class="view-items">
+												<dt>品牌馆</dt>
+												<dd><a href="#">内衣</a></dd>
+												<dd><a href="#">中衣</a></dd>
+												<dd><a href="#">大衣</a></dd>
+											</dl>
+										</li>							
+									</ul>
+								</div>
+							</div>
 						</li>
-						<li class="item-Menu m-linkB item-Menu2"> 
+						<li class="item-Menu m-linkB item-Menu2" data-type="mhover"> 
 							<div class="item-hd">
 								<h3> 
-									<i class="iconfont">l</i>
+									<i class="iconfont">k</i>
 									女包/大包/小包
 								</h3>
 							</div>
@@ -486,23 +500,63 @@ file_put_contents('css/base.css', $less->parse());
 									<a href="#">毛衣</a>
 								</p>
 							</div>
+							<div class="ui-category"> 
+							<div class="sub-view m-linkA"> 
+									<ul class="view-list">
+										<li>
+											<dl class="view-items">
+												<dt>品牌馆</dt>
+												<dd><a href="#">内衣</a></dd>
+												<dd><a href="#">中衣</a></dd>
+												<dd><a href="#">大衣</a></dd>
+											</dl>
+										</li>							
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="item-Menu m-linkB" data-type="mhover"> 
+							<div class="item-hd">
+								<h3> 
+									<i class="iconfont">k</i>
+									女包/大包/小包
+								</h3>
+							</div>
+							<div class="item-hd"> 
+								<p>
+									<a href="#">女装</a>
+									<a href="#">男装</a>
+									<a href="#">内衣</a>
+									<a href="#">羽绒服</a>
+									<a href="#">大衣</a>
+									<a href="#">毛衣</a>
+								</p>
+								<p>
+									<a href="#">女装</a>
+									<a href="#">男装</a>
+									<a href="#">内衣</a>
+									<a href="#">羽绒服</a>
+									<a href="#">大衣</a>
+									<a href="#">毛衣</a>
+								</p>
+							</div>
+							<div class="ui-category"> 
+							<div class="sub-view m-linkA"> 
+									<ul class="view-list">
+										<li>
+											<dl class="view-items">
+												<dt>品牌馆</dt>
+												<dd><a href="#">内衣</a></dd>
+												<dd><a href="#">中衣</a></dd>
+												<dd><a href="#">大衣</a></dd>
+											</dl>
+										</li>							
+									</ul>
+								</div>
+							</div>
 						</li>
 					</ul>
 					<div class="sideBar"></div>
-				</div>
-				<div class="ui-category"> 
-					<div class="sub-view sub-view1 m-linkA"> 
-						<ul class="view-list">
-							<li>
-								<dl class="view-items">
-									<dt>品牌馆</dt>
-									<dd><a href="#">内衣</a></dd>
-									<dd><a href="#">中衣</a></dd>
-									<dd><a href="#">大衣</a></dd>
-								</dl>
-							</li>							
-						</ul>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -510,8 +564,12 @@ file_put_contents('css/base.css', $less->parse());
 	<script> 
 		In.add('ed',{path:'js/plugin/ed.js',type:'js',charset:'utf-8'});//交互js类
 		In.add('bootstrap',{path:'js/plugin/bootstrap.js',type:'js',charset:'utf-8'});//交互js类
-		//js
-		In.ready('bootstrap','ed',function(){
+		In.add('mhover',{path:'js/plugin/mhover.js',type:'js',charset:'utf-8'});//左边栏变换
+		In.ready('bootstrap','ed','mhover',function(){
+			//mhover自定义
+			$('.item-Menu').mhover({
+				ajaxShow : true
+			});
 			//全局active
 			$('.s-nav li').on('click',function(){
 				$(this).addClass('active').siblings().removeClass('active');
