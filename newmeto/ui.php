@@ -96,6 +96,12 @@ file_put_contents('css/base.css', $less->parse());
 							<em>边栏导航</em>
 						</a>
 					</li>
+					<li> 
+						<a data-src="#s-tb10" href="javascript:;">
+							<span class="iconfont">Ĝ</span>
+							<em>首部导航</em>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -560,6 +566,9 @@ file_put_contents('css/base.css', $less->parse());
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="s-tb10" class="sTab" style="display:none;"> 
+		
 	</div>
 	<script> 
 		In.add('ed',{path:'js/plugin/ed.js',type:'js',charset:'utf-8'});//交互js类
