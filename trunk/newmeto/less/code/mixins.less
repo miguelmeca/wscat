@@ -50,6 +50,20 @@
   }
 }
 
+//清除浮动方法
+.clearfix() {
+		*zoom: 1;
+		&:before,
+		&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
 
 // webkit核心focus效果方法
 // ------------------
