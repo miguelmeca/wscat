@@ -3277,6 +3277,43 @@ button.close {
   color:#ffffff;
   text-decoration:none;
 }
+.placeholding-input {
+  display:block;
+  height:30px;
+  width:270px;
+  overflow:visible;
+  position:relative;
+}
+.placeholding-input .ui-input {
+  width:266px;
+  height:20px;
+}
+.placeholding-input .ui-input:focus+.placeholder {
+  opacity:0.6;
+  filter:alpha(opacity=60);
+}
+.placeholding-input .placeholder {
+  -moz-user-select:none;
+  position:absolute;
+  bottom:1px;
+  right:1px;
+  top:1px;
+  left:2px;
+  color:#999999;
+  cursor:text;
+  font-size:13px;
+  height:20px;
+  line-height:20px;
+  padding:4px;
+  white-space:nowrap;
+  z-index:1;
+}
+.placeholding-input.hasfoucs .placeholder {
+  font-size:0 !important;
+  opacity:0;
+  filter:alpha(opacity=0);
+  z-index:-1;
+}
 .ui-form-done .ui-radiowrapper {
   display:inline-block;
   vertical-align:middle;
